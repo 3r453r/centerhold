@@ -34,7 +34,8 @@ npm run dev      # local preview
 npm run build    # static output in dist/
 ```
 
-Node 22. Deployed by Cloudflare Pages on push to `main` (build `npm run build`, output `dist`).
+Node 22. Deployed by Cloudflare Pages on push to `main` (build `npm run build`, output `dist`). The
+`www` -> apex redirect is a zone-level Redirect Rule in Cloudflare, not a file here.
 
 ## Licence
 
