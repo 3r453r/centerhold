@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+// The register is a single content entry with kind: register. Until it is
+// published, the page says what it will be and why it comes first.
+const [reg] = await getCollection('essays', ({ data }) => data.kind === 'register');
+const rendered = reg ? await render(reg) : null;
+const fmt = (x: Date) => x.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title="The Assumptions" description="Everything this site takes as given, stated plainly. A standing register that changes only by explicit, dated ruling.">
+  <div class="page-wrap">
+    {reg && rendered ? (
+      <article class="read">
+        <div class="eyebrow">
+          <span class="num">A0</span>
+          <span>foundations &middot; the register</span>
+          <span class="date">{fmt(reg.data.published)}{reg.data.updated ? ` · revised ${fmt(reg.data.updated)}` : ''}</span>
+        </div>
+        <h1>{reg.data.title}</h1>
+        <p class="lede">{reg.data.description}</p>
+        <div class="prose">
+          <rendered.Content />
+        </div>
+        <div class="after">
+          <a href="/essays">&larr; all essays</a>
+          <span class="mono">every essay cites this page by anchor</span>
+        </div>
+      </article>
+    ) : (
+      <article class="read">
+        <div class="eyebrow">
+          <span class="num">A0</span>
+          <span>foundations &middot; the register</span>
+          <span class="date">forthcoming</span>
+        </div>
+        <h1>The Assumptions</h1>
+        <p class="lede">Everything taken as given, stated plainly, before a single argument is made.</p>
+        <div class="register-note">
+          <p>This page will be a standing register, not an essay: the list of what the whole site assumes, each item stated in one plain sentence, each one numbered so that any essay downstream can cite it by anchor. Items that are speculative or unresolved will say so. Nothing on it changes quietly &mdash; a change is an explicit, dated ruling, and the previous wording stays in the record.</p>
+          <p>It comes first on purpose. If you and I are going to part company, this is the cheapest and most honest place to do it: on what we take as given, rather than on a conclusion about something you already care about.</p>
+          <p class="pull">A disagreement about premises is a conversation. A disagreement about conclusions, with premises hidden, is a fight.</p>
+        </div>
+      </article>
+    )}
+  </div>
+</Base>

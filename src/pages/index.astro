@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+// The three stones at the mouth of the channel link to the real text once
+// it is published; until then each one points at its forthcoming entry.
+const all = await getCollection('essays');
+const byNumber = (n: string) => all.find((e) => e.data.number === n);
+const a0 = byNumber('A0');
+const e1 = byNumber('01');
+const e2 = byNumber('02');
+const hrefFor = (e: typeof a0, fallback: string) =>
+  e ? (e.data.kind === 'register' ? '/assumptions' : `/essays/${e.id}`) : fallback;
+---
+<Base surface="landing" description="The centre is not a compromise. It is where the flow steadies. Essays from the quiet part of the river.">
+  <Fragment slot="under">
+    <canvas id="river" aria-hidden="true"></canvas>
+    <div class="veil" aria-hidden="true"></div>
+  </Fragment>
+
+  <section class="hero" id="top">
+    <span class="driftword" style="top: 16%; left: 7%; font-size: 19px; --wd: 26s; --wl: -4s; --wx: 60px; --wy: -24px; --wr: -6deg; --wo: 0.4;">prawda</span>
+    <span class="driftword" style="top: 30%; left: 13%; font-size: 15px; --wd: 34s; --wl: -12s; --wx: 44px; --wy: 30px; --wr: 4deg; --wo: 0.3;">veritas</span>
+    <span class="driftword" style="top: 58%; left: 6%; font-size: 17px; --wd: 30s; --wl: -8s; --wx: 52px; --wy: -36px; --wr: -3deg; --wo: 0.35;">αλήθεια</span>
+    <span class="driftword" style="top: 74%; left: 15%; font-size: 14px; --wd: 38s; --wl: -20s; --wx: 36px; --wy: 22px; --wr: 5deg; --wo: 0.28;">vérité</span>
+    <span class="driftword" style="top: 18%; right: 8%; font-size: 17px; --wd: 32s; --wl: -6s; --wx: -56px; --wy: 26px; --wr: 5deg; --wo: 0.38;">真理</span>
+    <span class="driftword" style="top: 36%; right: 14%; font-size: 15px; --wd: 28s; --wl: -16s; --wx: -40px; --wy: -30px; --wr: -4deg; --wo: 0.3;">satya</span>
+    <span class="driftword" style="top: 60%; right: 7%; font-size: 19px; --wd: 36s; --wl: -10s; --wx: -60px; --wy: 20px; --wr: 3deg; --wo: 0.4;">wahrheit</span>
+    <span class="driftword" style="top: 78%; right: 13%; font-size: 14px; --wd: 31s; --wl: -22s; --wx: -38px; --wy: -26px; --wr: -5deg; --wo: 0.28;">truth</span>
+
+    <div class="kicker">essays from the quiet part of the river</div>
+    <h1 class="settle" id="headline"><span class="ln">The centre is not a compromise.</span><span class="ln">It is where the flow <em>steadies</em>.</span></h1>
+    <p class="sub">Ideas arrive turbulent, from every bank and in every tongue. The work of the middle is laminar: assumptions stated, opposition steelmanned, statistics read honestly &mdash; until the current runs clear enough to drink from.</p>
+    <div class="cta-row">
+      <a class="cta" href="#gate">Enter the stream</a>
+      <a class="quiet-link" href={hrefFor(a0, '/assumptions')}>read the assumptions first &rarr;</a>
+    </div>
+    <div class="scrollcue">the currents meet in the middle &darr;</div>
+  </section>
+
+  <section class="band confluence reveal">
+    <div class="band-inner">
+      <p>Both currents carry something true, and both arrive shouting. This is the place where they are made to <em>speak in turn</em>.</p>
+      <div class="attrib">the house rule</div>
+    </div>
+  </section>
+
+  <section class="band gate" id="gate">
+    <div class="band-inner">
+      <div class="gate-head reveal">
+        <div class="eyebrow">the gate &middot; passed in order</div>
+        <h2>Three stones stand at the mouth of the channel.</h2>
+        <p>Everything downstream builds on them. If you reject one, you will know exactly where we part &mdash; honestly, and without a fight.</p>
+      </div>
+      <div class="stones">
+        <a class="stone reveal" href={hrefFor(a0, '/assumptions')}>
+          <span class="num">A0</span>
+          <h3>The Assumptions</h3>
+          <p>Everything taken as given, stated plainly. A standing register that changes only by explicit, dated ruling &mdash; nothing here shifts quietly.</p>
+          <span class="go">{a0 ? 'read the register' : 'forthcoming'} &rarr;</span>
+        </a>
+        <a class="stone reveal" href={hrefFor(e1, '/essays#foundations')}>
+          <span class="num">01</span>
+          <h3>Objective truth, and why violence answers to it</h3>
+          <p>Where no fact of the matter exists, no argument can end except by force. Shared reality is the referee &mdash; and the only leash force has ever worn.</p>
+          <span class="go">{e1 ? 'read the essay' : 'forthcoming'} &rarr;</span>
+        </a>
+        <a class="stone reveal" href={hrefFor(e2, '/essays#foundations')}>
+          <span class="num">02</span>
+          <h3>Statistics: the most important tool, and the most abused</h3>
+          <p>Distributions show you a society. They say nothing about the person in front of you. Both truths at once, or you have left the conversation.</p>
+          <span class="go">{e2 ? 'read the essay' : 'forthcoming'} &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band channel-band" id="channel">
+    <div class="channel reveal">
+      <div class="eyebrow">from essay one</div>
+      <p>Begin with the sentence most of this site hangs on: <em>there is a way things are.</em> Not a way for you and a way for me &mdash; a way, full stop, indifferent to preference, party, or mood.</p>
+      <p>Consider what a group of people becomes when it stops believing it. Disputes do not vanish; they merely lose their referee. Where no fact of the matter exists, no argument can end except by exhaustion or force &mdash; and exhaustion is just force on a delay.</p>
+      <p class="pull">Where nothing is undebatable, everything is violence-eligible.</p>
+    </div>
+  </section>
+
+  <section class="band stillness reveal" id="still">
+    <div class="band-inner">
+      <div class="waterline" aria-hidden="true"></div>
+      <svg class="keystone-svg" width="120" height="78" viewBox="0 0 48 30" fill="none" aria-hidden="true">
+        <path d="M4 28 A20 20 0 0 1 44 28 L37 28 A13 13 0 0 0 11 28 Z" fill="#1B222B" stroke="#56606C" stroke-width="0.8"></path>
+        <polygon class="key" points="19.2,8.6 28.8,8.6 26.6,15.4 21.4,15.4" fill="#D9A441" stroke="#0E141A" stroke-width="1.2"></polygon>
+      </svg>
+      <h2>When the water is still, you can see the bottom.</h2>
+      <p class="commit">To read further you need grant only one thing: there is a way things are, independent of what anyone prefers. If you cannot grant that, this is where we part &mdash; with thanks for coming this far downstream.</p>
+      <a class="cta" href={hrefFor(e1, '/essays#foundations')}>{e1 ? 'Begin with Essay I' : 'See what is coming'}</a>
+    </div>
+  </section>
+
+  <script is:inline src="/landing.js"></script>
+</Base>

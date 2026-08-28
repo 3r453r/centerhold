@@ -1,0 +1,17 @@
+{
+  "name": "centrehold",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Centrehold -- essays from the quiet part of the river",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.11",
+    "astro": "^5.12.0"
+  }
+}

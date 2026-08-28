@@ -1,0 +1,77 @@
+---
+import '../styles/site.css';
+import '../styles/pages.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** 'landing' keeps the river and the fixed veil; 'page' is the still-water surface. */
+  surface?: 'landing' | 'page';
+  ogType?: string;
+}
+
+const {
+  title,
+  description = 'Essays from the quiet part of the river: assumptions stated, opposition steelmanned, statistics read honestly.',
+  surface = 'page',
+  ogType = 'website',
+} = Astro.props;
+
+const fullTitle = title ? `${title} · Centrehold` : 'Centrehold';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="Centrehold" href="/rss.xml" />
+    <meta property="og:site_name" content="Centrehold" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#0E141A" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Spline+Sans+Mono:wght@400;500;600&display=swap"
+    />
+    <slot name="head" />
+  </head>
+  <body class={surface}>
+    <slot name="under" />
+    <main>
+      <header class="site">
+        <a class="wordmark" href="/" aria-label="Centrehold home">
+          <svg width="36" height="24" viewBox="0 0 48 30" fill="none" aria-hidden="true">
+            <path d="M4 28 A20 20 0 0 1 44 28 L37 28 A13 13 0 0 0 11 28 Z" fill="#EDE7D9"></path>
+            <polygon points="19.2,8.6 28.8,8.6 26.6,15.4 21.4,15.4" fill="#D9A441" stroke="#0E141A" stroke-width="1.6"></polygon>
+          </svg>
+          <span>Centrehold</span>
+        </a>
+        <nav class="site" aria-label="Site">
+          <a href="/essays">essays</a>
+          <a href="/assumptions">assumptions</a>
+          <a href="/about">about</a>
+          <a class="pill" href="/subscribe">subscribe</a>
+        </nav>
+      </header>
+      <slot />
+    </main>
+    <footer class="site" id="footer">
+      <span class="tag">Centrehold &middot; essays that hold</span>
+      <nav aria-label="Footer">
+        <a href="/subscribe">new essays by email</a>
+        <a href="/rss.xml">rss</a>
+        <a href="https://github.com/3r453r/centerhold">source</a>
+      </nav>
+    </footer>
+  </body>
+</html>

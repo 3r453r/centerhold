@@ -1,0 +1,89 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const all = (await getCollection('essays')).sort(
+  (a, b) => a.data.published.valueOf() - b.data.published.valueOf(),
+);
+const href = (e: (typeof all)[number]) => (e.data.kind === 'register' ? '/assumptions' : `/essays/${e.id}`);
+const fmt = (d: Date) => d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+
+// The foundations arc is fixed in advance: three stones, read in order.
+// Anything not yet published shows as forthcoming rather than absent.
+const founding = [
+  { number: 'A0', title: 'The Assumptions', blurb: 'Everything taken as given, stated plainly. A standing register that changes only by explicit, dated ruling.' },
+  { number: '01', title: 'Objective truth, and why violence answers to it', blurb: 'There is a way things are; a group that abandons this can settle disputes only by power; so force must ground in something undebatable.' },
+  { number: '02', title: 'Statistics: the most important tool, and the most abused', blurb: 'Distributions are how you see a society. A statistic says nothing about an individual. Both at once, or you have left the conversation.' },
+];
+const foundations = founding.map((f) => ({ ...f, entry: all.find((e) => e.data.number === f.number) }));
+
+const lanes: { key: 'timeless' | 'applied' | 'event-horizon'; label: string; note: string }[] = [
+  { key: 'timeless', label: 'timeless', note: 'settled positions, set out for a general reader' },
+  { key: 'applied', label: 'applied', note: 'contested ground, derived from the foundations, opposition steelmanned first' },
+  { key: 'event-horizon', label: 'event horizon', note: 'positions taken under uncertainty, dated and labelled as such' },
+];
+---
+<Base title="Essays" description="The foundations arc, then the lanes: timeless, applied, event horizon.">
+  <div class="page-wrap">
+    <div class="index-head">
+      <h1>Read in order. The first three are the gate.</h1>
+      <p>Everything downstream cites the foundations. Lose me there and we part on epistemology, which is cheap and honest; lose me on a conclusion and we part on tribe, which is neither.</p>
+    </div>
+
+    <section class="lane" id="foundations">
+      <div class="eyebrow">foundations &middot; the gate</div>
+      <ol class="lane-list">
+        {foundations.map((f, i) => f.entry ? (
+          <li>
+            <a class:list={['entry', { teal: i === 1 }]} href={href(f.entry)}>
+              <span class="num">{f.number}</span>
+              <div>
+                <h3>{f.entry.data.title}</h3>
+                <p>{f.entry.data.description}</p>
+                <div class="meta">{fmt(f.entry.data.published)}</div>
+              </div>
+            </a>
+          </li>
+        ) : (
+          <li>
+            <div class:list={['entry', 'forthcoming', { teal: i === 1 }]}>
+              <span class="num">{f.number}</span>
+              <div>
+                <h3>{f.title}</h3>
+                <p>{f.blurb}</p>
+                <div class="meta">forthcoming</div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    {lanes.map((lane) => {
+      const entries = all.filter((e) => e.data.lane === lane.key && e.data.kind === 'essay');
+      return (
+        <section class="lane" id={lane.key}>
+          <div class="eyebrow">{lane.label} &middot; {lane.note}</div>
+          {entries.length ? (
+            <ol class="lane-list">
+              {entries.map((e) => (
+                <li>
+                  <a class="entry" href={href(e)}>
+                    <span class="num">{e.data.number}</span>
+                    <div>
+                      <h3>{e.data.title}</h3>
+                      <p>{e.data.description}</p>
+                      <div class="meta">{fmt(e.data.published)}{e.data.speculative ? ' · under uncertainty' : ''}</div>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p class="entry forthcoming" style="display:block; font-size: 16px;">Nothing here yet. This lane opens once the foundations are published.</p>
+          )}
+        </section>
+      );
+    })}
+  </div>
+</Base>
