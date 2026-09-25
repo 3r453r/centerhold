@@ -211,3 +211,71 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
   .entry { grid-template-columns: 1fr; gap: 12px; }
   .entry .num { width: 64px; }
 }
+
+/* Anchored register items: land below the header, show the id on hover */
+.prose a[id^="a0-"] { display: block; position: relative; top: -84px; visibility: hidden; height: 0; }
+
+/* Register table (A0, "at a glance") */
+.register-table { overflow-x: auto; margin: 0 0 1.6em; }
+.register-table table { font-size: 0.86em; }
+.register-table td:first-child a { font-family: var(--mono); font-size: 12px; letter-spacing: 1.2px; border-bottom: 0; }
+.register-table td:nth-child(3), .register-table td:nth-child(4), .register-table td:nth-child(5) {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 1px; color: var(--silt); white-space: nowrap;
+}
+.register-table td strong { color: var(--gold); font-weight: 500; }
+
+/* Argument map (E1): premises, typed, with the bridge visible */
+.argmap {
+  margin: 2em 0;
+  padding: 22px 26px;
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: var(--pool);
+  font-size: 0.92em;
+  line-height: 1.55;
+}
+.argmap p { margin: 0; }
+.argmap p + p { margin-top: 10px; }
+.argmap .plus, .argmap .arrow {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--silt);
+}
+.argmap .tag {
+  display: inline-block; margin-right: 10px; padding: 2px 9px;
+  border-radius: 999px; border: 1px solid var(--hairline);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; vertical-align: 2px;
+}
+.argmap .tag.map { color: var(--teal); border-color: var(--teal); }
+.argmap .tag.policy { color: var(--gold); border-color: var(--gold); }
+.argmap em { color: var(--silt); }
+
+/* Worked calculation box (E2) */
+.calc {
+  margin: 2em 0;
+  padding: 22px 26px;
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: var(--pool);
+  font-size: 0.92em;
+  line-height: 1.55;
+}
+.calc p { margin: 0 0 0.9em; }
+.calc p:last-child { margin-bottom: 0; }
+.calc .calc-title { font-family: var(--mono); font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--silt); }
+.calc table { margin: 0 0 1em; font-size: 0.95em; }
+.calc td { padding: 8px 10px; }
+.calc td.num { font-family: var(--mono); text-align: right; white-space: nowrap; color: var(--ivory); }
+
+/* Figures */
+.prose figure.fig { margin: 2em 0; }
+.prose figure.fig img { display: block; width: 100%; height: auto; border: 1px solid var(--hairline); border-radius: 18px; }
+.prose figure.fig figcaption { margin-top: 12px; font-size: 0.86em; line-height: 1.55; color: var(--silt); }
+.prose figure.fig figcaption strong { color: var(--ivory); }
+
+/* Endnotes (GFM footnotes) */
+.prose .footnotes { border-top: 1px solid var(--hairline); padding-top: 1.4em; }
+.prose .footnotes h2.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.prose .footnotes ol { padding-left: 1.6em; }
+.prose .footnotes li { margin: 0.6em 0; }
+.prose .footnotes p { margin: 0 0 0.5em; }
+.prose sup a[data-footnote-ref] { border-bottom: 0; font-family: var(--mono); font-size: 0.7em; padding: 0 2px; }
+.prose a[data-footnote-backref] { border-bottom: 0; }

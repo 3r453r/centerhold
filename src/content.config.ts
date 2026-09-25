@@ -11,7 +11,7 @@ const essays = defineCollection({
     // A0 is the Assumptions register; essays are numbered 01, 02, ...
     number: z.string(),
     lane: z.enum(['foundations', 'timeless', 'applied', 'event-horizon']),
-    // 'register' renders at /assumptions instead of /essays/<slug>.
+    // 'register' renders at /assumptions instead of /<slug>.
     kind: z.enum(['essay', 'register']).default('essay'),
     published: z.coerce.date(),
     updated: z.coerce.date().optional(),

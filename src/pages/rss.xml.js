@@ -13,7 +13,7 @@ export async function GET(context) {
       title: `${e.data.number} · ${e.data.title}`,
       description: e.data.description,
       pubDate: e.data.published,
-      link: e.data.kind === 'register' ? '/assumptions' : `/essays/${e.id}`,
+      link: e.data.kind === 'register' ? '/assumptions' : `/${e.id}`,
       categories: [e.data.lane],
     })),
     trailingSlash: false,

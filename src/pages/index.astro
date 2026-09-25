@@ -10,7 +10,7 @@ const a0 = byNumber('A0');
 const e1 = byNumber('01');
 const e2 = byNumber('02');
 const hrefFor = (e: typeof a0, fallback: string) =>
-  e ? (e.data.kind === 'register' ? '/assumptions' : `/essays/${e.id}`) : fallback;
+  e ? (e.data.kind === 'register' ? '/assumptions' : `/${e.id}`) : fallback;
 ---
 <Base surface="landing" description="The centre is not a compromise. It is where the flow steadies. Essays from the quiet part of the river.">
   <Fragment slot="under">

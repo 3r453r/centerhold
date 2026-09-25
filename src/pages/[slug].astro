@@ -1,5 +1,5 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Base from '../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -37,7 +37,8 @@ const teal = d.lane === 'timeless' || d.lane === 'event-horizon';
         <div class="builds-on">
           <span>builds on</span>
           <a href="/assumptions">A0 &middot; the Assumptions</a>
-          {d.number !== '01' && <a href="/essays#foundations">the foundations</a>}
+          {d.number !== '01' && <a href="/objective-truth">01 &middot; Objective truth</a>}
+          {d.number !== '01' && d.number !== '02' && <a href="/statistics">02 &middot; Statistics</a>}
         </div>
       )}
       <div class="prose">

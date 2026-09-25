@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const all = (await getCollection('essays')).sort(
   (a, b) => a.data.published.valueOf() - b.data.published.valueOf(),
 );
-const href = (e: (typeof all)[number]) => (e.data.kind === 'register' ? '/assumptions' : `/essays/${e.id}`);
+const href = (e: (typeof all)[number]) => (e.data.kind === 'register' ? '/assumptions' : `/${e.id}`);
 const fmt = (d: Date) => d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
 
 // The foundations arc is fixed in advance: three stones, read in order.
@@ -13,7 +13,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-GB', { year: 'numeric', month:
 const founding = [
   { number: 'A0', title: 'The Assumptions', blurb: 'Everything taken as given, stated plainly. A standing register that changes only by explicit, dated ruling.' },
   { number: '01', title: 'Objective truth, and why violence answers to it', blurb: 'There is a way things are; a group that abandons this can settle disputes only by power; so force must ground in something undebatable.' },
-  { number: '02', title: 'Statistics: the most important tool, and the most abused', blurb: 'Distributions are how you see a society. A statistic says nothing about an individual. Both at once, or you have left the conversation.' },
+  { number: '02', title: 'Statistics: the most important tool, and the most abused', blurb: 'Distributions are how you see a society. A distribution is not a verdict on an individual. Both at once, or you have left the conversation.' },
 ];
 const foundations = founding.map((f) => ({ ...f, entry: all.find((e) => e.data.number === f.number) }));
 
