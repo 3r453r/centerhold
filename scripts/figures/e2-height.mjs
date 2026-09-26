@@ -7,9 +7,9 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// Default d is the NHANES-derived value pinned in E2 endnote 1 (Series 3 No. 46,
-// 2015-2018: 14.0 cm mean gap over a pooled SD of 7.21).
-const d = Number(process.argv[2] ?? 1.94);
+// Default d is the NHANES-derived value pinned in E2 endnote 1 (Series 3 No. 50,
+// Aug 2021-Aug 2023, Table 7: 13.9 cm mean gap over a pooled SD of 7.33).
+const d = Number(process.argv[2] ?? 1.90);
 
 // Standard normal CDF (Abramowitz & Stegun 7.1.26, |err| < 1.5e-7).
 function Phi(x) {
@@ -64,7 +64,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" wid
 <line x1="${sx(muM).toFixed(1)}" y1="${sy(pdf(0, 0))}" x2="${sx(muM).toFixed(1)}" y2="${sy(0)}" stroke="${gold}" stroke-dasharray="3 5" stroke-opacity="0.7"/>
 <text class="lab" x="${sx(muW).toFixed(1)}" y="${T - 14}" text-anchor="middle" fill="${teal}" style="fill:${teal}">women</text>
 <text class="lab" x="${sx(muM).toFixed(1)}" y="${T - 14}" text-anchor="middle" style="fill:${gold}">men</text>
-<text class="small" x="${W / 2}" y="${sy(0) + 22}" text-anchor="middle">height, in units of one within-sex spread &#183; means ${d} spreads apart</text>
+<text class="small" x="${W / 2}" y="${sy(0) + 22}" text-anchor="middle">height, in units of one within-sex spread &#183; means ${d.toFixed(2)} spreads apart</text>
 <g transform="translate(${L + 6}, ${sy(0) - 96})">
   <text class="num">${pct(overlap)}</text>
   <text class="lab" y="20">shared area</text>
