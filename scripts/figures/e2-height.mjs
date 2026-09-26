@@ -43,7 +43,6 @@ const shared = xs.map((x, i) => `${i ? 'L' : 'M'}${sx(x).toFixed(1)},${sy(Math.m
 
 const gold = '#D9A441', teal = '#5FB3A3', ivory = '#EDE7D9', silt = '#9AA3A8', bed = '#0E141A';
 const pct = (v) => `${Math.round(v * 100)}%`;
-const oneIn = (v) => `about one pairing in ${Math.round(1 / v)}`;
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-labelledby="t">
 <title id="t">Two overlapping height distributions: shared area ${pct(overlap)}, chance a random woman is taller than a random man ${pct(pPair)}</title>
@@ -65,15 +64,15 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" wid
 <text class="lab" x="${sx(muW).toFixed(1)}" y="${T - 14}" text-anchor="middle" fill="${teal}" style="fill:${teal}">women</text>
 <text class="lab" x="${sx(muM).toFixed(1)}" y="${T - 14}" text-anchor="middle" style="fill:${gold}">men</text>
 <text class="small" x="${W / 2}" y="${sy(0) + 22}" text-anchor="middle">height, in units of one within-sex spread &#183; means ${d.toFixed(2)} spreads apart</text>
-<g transform="translate(${L + 6}, ${sy(0) - 96})">
+<g transform="translate(${L + 6}, ${sy(0) - 150})">
   <text class="num">${pct(overlap)}</text>
   <text class="lab" y="20">shared area</text>
-  <text class="small" y="38">the two curves overlap this much</text>
+  <text class="small" y="38">shared by both curves</text>
 </g>
-<g transform="translate(${W - R - 6}, ${sy(0) - 96})" text-anchor="end">
+<g transform="translate(${W - R - 6}, ${sy(0) - 150})" text-anchor="end">
   <text class="num">${pct(pPair)}</text>
   <text class="lab" y="20">she is taller</text>
-  <text class="small" y="38">${oneIn(pPair)}, drawn at random</text>
+  <text class="small" y="38">one pairing in ${Math.round(1 / pPair)}</text>
 </g>
 </svg>
 `;

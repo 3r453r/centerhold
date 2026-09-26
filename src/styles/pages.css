@@ -222,6 +222,8 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
 .register-table td:nth-child(3), .register-table td:nth-child(4), .register-table td:nth-child(5) {
   font-family: var(--mono); font-size: 12px; letter-spacing: 1px; color: var(--silt); white-space: nowrap;
 }
+.register-table td:nth-child(2) { min-width: 12em; }
+.register-table td:nth-child(5) { white-space: normal; }
 .register-table td strong { color: var(--gold); font-weight: 500; }
 
 /* Argument map (E1): premises, typed, with the bridge visible */

@@ -12,8 +12,8 @@ const fmt = (d: Date) => d.toLocaleDateString('en-GB', { year: 'numeric', month:
 // Anything not yet published shows as forthcoming rather than absent.
 const founding = [
   { number: 'A0', title: 'The Assumptions', blurb: 'Everything taken as given, stated plainly. A standing register that changes only by explicit, dated ruling.' },
-  { number: '01', title: 'Objective truth, and why violence answers to it', blurb: 'There is a way things are; a group that abandons this can settle disputes only by power; so force must ground in something undebatable.' },
-  { number: '02', title: 'Statistics: the most important tool, and the most abused', blurb: 'Distributions are how you see a society. A distribution is not a verdict on an individual. Both at once, or you have left the conversation.' },
+  { number: '01', title: 'Objective truth, and what force must answer to', blurb: 'There is a way things are. Shared standards let us check claims, correct mistakes and scrutinise coercive rules, without agreeing on every philosophical foundation.' },
+  { number: '02', title: 'Statistics: the most important tool, and the most abused', blurb: 'Distributions are how you see a society. A distribution is not a verdict on an individual. Evidence, treatment and publication need separate judgments.' },
 ];
 const foundations = founding.map((f) => ({ ...f, entry: all.find((e) => e.data.number === f.number) }));
 
@@ -26,7 +26,7 @@ const lanes: { key: 'timeless' | 'applied' | 'event-horizon'; label: string; not
 <Base title="Essays" description="The foundations arc, then the lanes: timeless, applied, event horizon.">
   <div class="page-wrap">
     <div class="index-head">
-      <h1>Read in order. The first three are the gate.</h1>
+      <h1>Read in order. The first three are the foundations.</h1>
       <p>Everything downstream cites the foundations. Lose me there and we part on epistemology, which is cheap and honest; lose me on a conclusion and we part on tribe, which is neither.</p>
     </div>
 

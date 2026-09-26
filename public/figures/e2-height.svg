@@ -18,14 +18,14 @@
 <text class="lab" x="290.1" y="32" text-anchor="middle" fill="#5FB3A3" style="fill:#5FB3A3">women</text>
 <text class="lab" x="429.9" y="32" text-anchor="middle" style="fill:#D9A441">men</text>
 <text class="small" x="360" y="318" text-anchor="middle">height, in units of one within-sex spread &#183; means 1.90 spreads apart</text>
-<g transform="translate(46, 200)">
+<g transform="translate(46, 146)">
   <text class="num">34%</text>
   <text class="lab" y="20">shared area</text>
-  <text class="small" y="38">the two curves overlap this much</text>
+  <text class="small" y="38">shared by both curves</text>
 </g>
-<g transform="translate(674, 200)" text-anchor="end">
+<g transform="translate(674, 146)" text-anchor="end">
   <text class="num">9%</text>
   <text class="lab" y="20">she is taller</text>
-  <text class="small" y="38">about one pairing in 11, drawn at random</text>
+  <text class="small" y="38">one pairing in 11</text>
 </g>
 </svg>
