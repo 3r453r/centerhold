@@ -1,89 +1,82 @@
 ---
-title: "Statistics: the most important tool, and the most abused"
-description: "Reliable statistics inform individual predictions without settling how people may be treated. Evidence, treatment, and publication require distinct judgments."
 number: "02"
-lane: foundations
+title: "Statistics: the most important tool, and the most abused"
 kind: essay
+lane: foundations
 published: 2026-09-26
+description: Reliable statistics inform individual predictions without settling how people may be treated. Evidence, treatment, and publication require distinct judgments.
+updated: 2026-09-27
 ---
 
 *Builds on [the Assumptions](/assumptions) and [Essay 01](/objective-truth): there is
-a way things are, and a claim has content to the extent it changes what we should expect.
-Assumptions used: [A0.1](/assumptions#a0-1), [A0.2](/assumptions#a0-2), [A0.D2](/assumptions#a0-d2), [A0.P3](/assumptions#a0-p3).*
+a way things are, and a claim says something to the extent it changes what we should
+expect.*[^base]
 
 I am going to ask you to hold two sentences at once.
 
-**Distributions are how you see a society.** For questions of how many and how often, there
-is no substitute. And: **a
-distribution is not a verdict on the person in front of you.** Group membership can
-inform a probability. A large relative difference can coexist with a small absolute
-probability when the outcome is rare. Neither a group statistic nor an individual
-prediction, by itself, settles how someone may be treated.
+**Distributions are how you see a society.** And: **a distribution is not a verdict on the person in front of you.** (A distribution is just
+how something is spread across a whole population: how many, how often, how far apart.)
 
 Most public arguments about groups of people are two camps, each holding one of these
-sentences and suspecting the other of having dropped it. One camp recites aggregates and
-worries that the other is innumerate. The other distrusts aggregates and worries that the
-first is bigoted. Each worry is sometimes right. My
-claim is that denying reliable evidence and treating group membership as an individual
-verdict are different errors. We need to take the evidence seriously and separately
-justify what we do with it, including how we communicate it.
+sentences and suspecting the other of having dropped it. One camp recites the numbers and
+worries that the other can't count. The other distrusts the numbers and worries that the
+first is bigoted. Each worry is sometimes right. Ignoring good evidence and turning a group number into a
+judgment on one person are different mistakes, and we need to avoid both. And a correct
+number alone still does not decide how anyone should be treated, or how the finding should
+be told. That takes its own argument.
 
-## 1. Why there is no other instrument
+## 1. You have never seen a society
 
 You have never seen a society. Neither have I. What each of us has seen is, at most, a few
 thousand people, filtered by where we live, what we do, and what gets shown to us — a sample
 so skewed that no honest method would accept it. Yet questions about societies are real
 questions with real answers: is this disease spreading; are wages rising; is crime falling;
-do children from this district end up poorer than children from that one. Whoever answers
-them is using an aggregate. The only choice is between measured aggregates and imagined ones
-— between counting, and generalising your news feed.
+do children from this district end up poorer than children from that one. For questions of
+how many and how often, there is no substitute for counting. Whoever answers them is using
+an aggregate. The only choice is between measured aggregates and imagined ones — between
+counting, and generalising your news feed.
 
-When a distributional finding is on the table, honest responses to its evidence
-include: it is wrong, and here is a better measurement; it is right, and here is
-what it actually means; it is unreliable, and here is the flaw in how it was made.
-Those replies address the finding. There is also a different question: whether
-and how to publish it.
+When someone puts a finding about a group on the table, honest answers include these three:
+it's wrong, and here is a better measurement; it's right, and here is what it actually
+means; it's unreliable, and here is the flaw in how it was made. Each of those answers the
+evidence.
 
-"You cannot say that about a group" leaves that distinction unclear. It might
-reject the finding without answering the evidence. It might instead accept the
-finding while objecting to its framing, audience, or foreseeable effects. The
-second objection requires a policy argument; it is not automatically truth-denial.
-My publication principle, also recorded as [A0.P3](/assumptions#a0-p3), is this:
+"You cannot say that about a group" answers something else, and it is worth asking what.
+Sometimes it means *that isn't true*, with no evidence offered. Sometimes it means *that
+may be true, but saying it this way, to this audience, will do harm*. The second needs an argument about publishing, not about truth, and it is a fair thing to
+argue about.
 
-Whether a finding is true and whether I should publish it are separate questions. Foreseeable harm can count against publication without counting against the finding's truth. A decision to withhold or limit my own publication needs a policy justification that considers the harms of disclosure, the costs of withholding, and less harmful ways of communicating the finding. Neither political discomfort nor a bare assertion of possible misuse settles the decision. This supplies no automatic authority to prevent others from publishing.
-
-I accept that in principle while doubting any individual's ability, including my
-own, to judge withholding correctly with all the relevant considerations taken
-into account. That doubt sets my default: because no one, including me, can reliably
-make the all-considerations judgment to withhold, the default is to publish; withholding
-carries the burden of justification, and where possible it is checked by someone other
-than the person withholding. The default sets no threshold, and it does not settle a
-reliable way to apply the principle. Withholding also has costs: decisions may become worse, harms may stay hidden, and findings
-may escape independent checking. Calling something a publication risk settles
-neither its truth nor what should be done about it.
+So I keep two questions apart: is it true, and should I publish it, and how? Foreseeable
+harm can be a reason not to publish, or to publish more carefully, without being any reason
+to think the finding false. Political discomfort doesn't settle the second question, and
+neither does a bare "someone might misuse it". My default is to
+publish. Not because publishing is always harmless, but because I don't trust anyone,
+myself included, to judge reliably when silence is better. So if I want to hold a finding
+back, the burden is on me to make the case, and where I can, to have someone else check
+it. Holding back has costs too: decisions get worse, harms stay hidden, and nobody can check the finding. Calling something a publication risk settles neither its
+truth nor what should be done about it. And none of this gives me any automatic right to
+stop someone else publishing.[^p3]
 
 A distribution is knowledge. It is often the *only* knowledge available at the scale of
-millions. A society that will not look at its own distributions is flying on instruments it
-has chosen to unplug.
+millions. A society that will not look at its own distributions is flying blind by choice: the instruments are there, and it has unplugged them.
 
 ## 2. What a distribution actually says
 
-Now I want to look closely at what that knowledge is knowledge *of* — because the abuse on
-the other side begins exactly where this goes unexamined.
+Now I want to look closely at what that knowledge is knowledge *of* — because the opposite abuse, turning a number into a verdict on a person, begins exactly
+where this goes unexamined.
 
 Take the most boring true group difference in the world: men are taller than women. The gap
 is real, large by the standards of social science, and visible wherever height has been
 measured. Now watch what the sentence compresses away. Pick a man and a woman at random from
 the adult population of a country like the United States, and in about one pairing in eleven,
 she is the taller one.[^1] Not a rounding error — one in eleven. The two distributions are
-distinct, *and they overlap substantially*: about a third of the area under one curve sits
-under the other. "Men are taller than women" is a true sentence about two curves.
-It supports a probabilistic prediction for a pair sampled that way; it does not guarantee
-which of the next two people through the door is taller.
+distinct, *and they overlap substantially*: about a third of the area under one curve sits under the other. (That is a different number
+from the one in eleven, measuring something else; the figure below shows both.) "Men are taller than women" is a true sentence about two curves. It lets you make a good guess about a pair picked at random; it cannot promise which of the
+next two people through the door is taller.
 
 <figure class="fig">
 <img src="/figures/e2-height.svg" alt="Two overlapping bell curves, women's and men's adult heights, with the shared area shaded and the pairwise probability stated" width="720" height="360" loading="lazy" />
-<figcaption>Two quantities that are easy to confuse. <strong>Overlap</strong> is the shaded area the two curves share: about 34% here. <strong>Pairwise probability</strong> is the chance a random woman is taller than a random man: about 9%. Drawn at a standardised gap of 1.90 spreads, the value the US adult reference data give (endnote 1); the essay's claims survive anywhere in the plausible range.</figcaption>
+<figcaption>Two quantities that are easy to confuse. <strong>Overlap</strong> is the shaded area the two curves share: about 34% here. <strong>Pairwise probability</strong> is the chance a random woman is taller than a random man: about 9%. Drawn at a standardised gap of 1.90 spreads, the value the US adult reference data give (note 1); the essay's claims survive anywhere in the plausible range.</figcaption>
 </figure>
 
 Second lesson, from the strongest statistical claim in public health. Smoking causes lung
@@ -92,16 +85,18 @@ risk multiplier is enormous — on the order of twentyfold. *And most smokers ne
 cancer.*[^2] Both facts, at full strength. Which is why your uncle who smoked to ninety
 proves nothing — the claim was never "every smoker dies of it" — and why a doctor who told
 one particular smoker "you will get cancer" would be claiming far more than the evidence
-supports. The causal claim lives at the level of the distribution: it says what happens to
-*rates* when a population smokes. The abuse of the anecdote against the aggregate ("my
-uncle...") and the abuse of the aggregate against the person ("you will...") are the same
-arithmetic error, committed in opposite directions.
+supports. The causal claim is about the whole population: it says what happens to *rates*
+when a population smokes. The abuse of the anecdote against the aggregate ("my uncle...")
+and the abuse of the aggregate against the person ("you will...") are the same arithmetic
+error, committed in opposite directions.
 
-Reliable, relevant group statistics can inform predictions about an individual. Their evidential weight depends on how well they apply to the case and on the other evidence available; individual information does not automatically override them. A probability is not a certainty, and a prediction alone does not settle how someone may be treated. The justification for differential treatment requires a separate policy argument.
-
-Measuring someone's height can settle a question that the group average only helped us
-predict. Learning an irrelevant detail about them does not. What matters is what the new evidence tells us about
-the question, not merely that it concerns this particular person.
+So a reliable, relevant group number can tell you something about the person in front of
+you. How much depends on how well it fits their case and on what else you know about them,
+and learning more about them does not automatically cancel it. But it gives odds, not
+certainty, and odds alone never settle how you may treat someone.[^031] Measuring someone's
+height can settle a question the average only helped you guess. Learning something about
+them that has nothing to do with height does not: what counts is what new information tells
+you about the question, not merely that it is about this particular person.
 
 ## 3. The arithmetic of the accusation
 
@@ -112,22 +107,20 @@ most recent global count, about nine in ten of the people brought into contact w
 police as suspects in intentional homicide were men.[^3] That is a count of suspects, in the
 countries that report them, in one year — not every killer everywhere — but it is no one-year
 accident: earlier editions of the same study report the same lopsided share, and it is
-larger than almost any group difference the loudest debates are about. Now do the arithmetic that the accusation skips. Killing is mercifully
-rare. Take a difference that large in a trait that rare, and ask: given this man in front of
-me, what did the statistic tell me about *him*? The probability that a randomly chosen man
-was recorded for a homicide this year is minuscule; the probability for a woman, roughly nine
-times smaller. A nine-to-one ratio can compare two very small probabilities; the ratio
-does not make either probability large.
-The group difference informs an estimate; it does not establish that this individual
-committed a homicide. What action an estimate could justify is a further policy question.
+larger than almost any group difference the loudest debates are about. Now do the
+arithmetic that the accusation skips. Killing is mercifully rare. Take a difference that
+large in a trait that rare, and ask: given this man in front of me, what did the statistic
+tell me about *him*? The probability that a randomly chosen man was recorded for a homicide
+this year is minuscule; the probability for a woman, roughly nine times smaller. Nine to one
+compares two tiny numbers. It does not make either of them big.
 
-A statistician will rightly press one point. Once a homicide has happened, the nine-in-ten
+A statistician will rightly press one point, and it answers a different question. Once a homicide has happened, the nine-in-ten
 share *is* the relevant number for the question "who did it?": among otherwise unknown
 suspects, being a man multiplies the odds about ninefold. That is exactly where profiling
 begins, and the arithmetic does not forbid it. What keeps it from becoming a verdict is
 the rest of the reasoning: the probability for any one man stays small until other
 evidence narrows the field, and what anyone may do with that probability (stop, search,
-suspect) is the treatment question, which needs its own justification.
+suspect) needs its own justification.
 
 <div class="calc" role="figure" aria-label="A worked base-rate box">
 <p class="calc-title">Three different quantities, one word "nine to one"</p>
@@ -145,27 +138,23 @@ probabilities for a randomly selected member; neither establishes what a particu
 person did.</p>
 </div>
 
-This is a common shape of base-rate abuse: a *share* or a *ratio* between groups,
-brandished as if it were a *probability* about a person. The ratio can be huge while the
-probability stays tiny. An argument that treats "group X is overrepresented in bad
-thing Y" as proof that its next member committed Y has skipped the required inference.
-A policy that acts on a correctly estimated probability raises a different question:
-whether that treatment is justified. I want both questions kept visible, regardless of
-whether the conclusion flatters your side or wounds it.
+This is a common shape of base-rate abuse (the base rate is how common the thing is to begin
+with): a *share* or a *ratio* between groups, waved around
+as if it were the *probability* that one person did something. The ratio can be huge while
+the probability stays tiny. "Group X is overrepresented in bad thing Y, so its next member did Y" skips a step. And a policy that acts on a correctly worked-out probability
+raises a different question: whether that treatment is justified. I want both questions
+kept in view, whichever side the answer flatters.
 
 ## 4. Two abuses, two questions
 
-Now I can separate the two abuses without pretending that every disputed treatment
-of an individual is an arithmetic mistake.
-
-A reliable distribution can tell us something about both a population and the prospects
-of an individual. Denying a well-supported fact because of its possible misuse does not
-answer the evidence. Treating group membership as certainty about an individual goes
-beyond that evidence. Even a sound prediction leaves the justification for treatment to
-be argued. Each abuse can feed the other: every
-base-rate verdict hands the deniers a fresh injustice to point at, and every denial hands
-the verdict-passers proof that "you can't even say the numbers out loud". The shouting match
-sustains itself because each side mostly meets the other's worst version.
+Now I can separate the two abuses, without pretending that every disputed way of treating a
+person is an arithmetic mistake. Hear them side by side. One says: *that well-established
+number could be misused, so don't believe it* — which answers nothing about the evidence.
+The other says: *your group does this more, so you did it* — which claims far more than the
+evidence holds. They can feed each other. Every verdict read off a group rate hands the deniers a fresh
+injustice to point at, and every denial hands the verdict-passers proof that "you can't
+even say the numbers out loud". The shouting match keeps itself going because each side
+mostly meets the other's worst version.
 
 So here is what I would ask of anyone who wants to keep talking. Take measured aggregates
 seriously, even when you think a finding should be communicated with care; if you think
@@ -177,7 +166,7 @@ justification. The third does not follow from arithmetic alone.
 
 ## 5. The tool, used live: the age of the criminal
 
-Here is the live example I promised, chosen because the group in question carries, for now,
+Here is a live example, chosen because the group in question carries, for now,
 less partisan charge than the ones that fill the news.
 
 One of the most replicated findings in criminology is the age–crime curve. Measured by
@@ -186,66 +175,90 @@ twenties — where exactly depends on the offence, the place and the period — 
 declines, a shape reported across Western populations and in many other settings.[^4] A
 fifty-year-old is about a third as likely to be arrested for violence as a twenty-year-old.
 Put it beside the suspect gap above and the compressed truth is: recorded serious violence
-is concentrated among young men.
-This distributional fact is large, useful, and almost entirely uncontested — you have
-believed it all your life without discomfort.
+is concentrated among young men. This is large, useful, and almost entirely uncontested —
+you have believed it all your life without discomfort.
 
 Now run both abuses against it. Deny it? Nobody bothers; the fact circulates freely. Treat
 it as a verdict on an individual? Here the easy case is less innocent than it looks: young
-men are stopped and suspected more than most groups, and hardly anyone objects,
-because the group has no lobby. That is the verdict abuse at work, unnoticed because it
-offends no one. These data can inform a prediction
-about someone in the relevant population. They do not establish that a particular young
-man has committed a crime or poses a threat. Treating him as a suspect requires a policy
-justification; it does not follow simply from his group's higher rate. The aggregate
-informs a prediction, membership does not establish guilt, and how to treat someone
-requires a separate justification.
+men are stopped and suspected more than most groups, and hardly anyone objects, because the
+group has no lobby. That is the verdict abuse at work, unnoticed because it offends no one.
+The curve can inform the odds for a young man. It does not show that this one has committed
+a crime or is a danger, and treating him as a suspect needs a justification the curve alone
+cannot supply.
 
-One honest wrinkle, which I keep because I have promised not to sand off inconvenient
-corners: society does sometimes treat individuals by group statistics. In many insurance
+One honest wrinkle: society does sometimes treat individuals by group statistics. In many insurance
 markets a twenty-year-old pays far more to insure the same car than a fifty-year-old does,
 for no sin of his own.[^5] Note what that is: not a factual verdict about him, but a
-*policy* — a decision about who carries which costs under uncertainty. Group statistics
-and individual information can both inform the risk estimate; that estimate does not
-by itself justify the allocation of costs. Whether
-such policies are just is a real question — some jurisdictions have answered it one way for
-age and the opposite way for sex — and it is a question about rules we choose, not about
-facts we discovered. The map tells you the curves. Where to allow curve-based treatment —
-insurance perhaps, verdicts never — is a line *drawn*, not found, and I will always argue it
-as such.
+*policy* — a decision about who carries which costs under uncertainty. Group numbers and facts about the driver both feed the risk estimate; the estimate alone does
+not decide who should carry the cost. Whether such
+policies are just is a real question — some jurisdictions have answered it one way for age
+and the opposite way for sex — and it is a question about rules we choose, not about facts
+we discovered. The data tell you the curves. Where to allow treatment by curve — insurance
+perhaps, verdicts never — is a line *drawn*, not found, and I will always argue it as
+such.[^d2]
 
 And now the transfer, stated as openly as I can. The age–crime curve has the same
 arithmetic as the debates that actually fill the news, the ones where the group has a flag,
 a lobby, and a grievance ledger: overlapping distributions, a rare outcome, the same pair of
-available abuses. The evidential discipline carries over unchanged. The treatment question
-may not. Everyone passes through every age, but not through every sex or ancestry: a rule
-that burdens the young burdens each of us for a while, and a rule drawn along a line you are
-born on burdens some people for life. That is why age rules pass the test from the previous
-essay (would I agree to be the subject of this rule?) more easily than rules drawn by birth.
-And arrest data measure policing as well as crime, which is exactly where disputes about
-measurement get serious. None of that licenses denying a reliable finding, and none of it
-licenses a verdict. The essays that follow will ask you to keep the discipline you just
-used when the group is one you belong to, or one you have been taught to defend or to fear:
-weigh the evidence the same way, and argue the treatment on its own terms. If the reasoning
-was sound when no flag was flying, it did not become bigotry or betrayal when one went up.
+available abuses. The way you weigh the evidence carries over unchanged. The question of
+treatment may not. Everyone passes through every age, but not through every sex or
+ancestry: a rule that burdens the young burdens each of us for a while, and a rule drawn
+along a line you are born on burdens some people for life. That is why age rules pass the
+test from [the previous essay](/objective-truth) (would I agree to be the subject of this
+rule?) more easily than rules drawn by birth. And arrest data measure policing as well as
+crime, which is exactly where disputes about measurement get serious. None of that licenses
+denying a reliable finding, and none of it licenses a verdict.
+
+The essays that follow will ask you to keep the discipline you just used when the group is one you belong to, or one
+you have been taught to defend or to fear: weigh the evidence the same way, and argue the
+treatment on its own terms. If the reasoning was sound when no flag was flying, it did not
+become bigotry or betrayal when one went up.
 
 ## 6. What I hope we can carry forward
 
-The shared practice I am asking for is to take reliable, relevant statistics seriously,
-use them without turning probability into certainty, and separately justify how people
-are treated and how findings are communicated, and to keep that discipline most carefully
-when the group in question is one you care about.
+Here is the practice I am asking for: take reliable, relevant numbers seriously; use them
+without turning odds into certainty; argue separately for how people are treated and how
+findings are told; and keep to that most carefully when the group in question is one you
+care about.
 
-You can accept that practice while disagreeing with other parts of this project.
-That agreement is valuable in its own right. It does not settle every difficult case;
-it gives us a way to examine those cases together and challenge each other's mistakes.
+You can take up that practice and still disagree with other things on this site. That agreement is
+worth having on its own. It won't settle every hard case, but it gives us a way to work
+through them together and catch each other's mistakes.
 
 The foundations end here. Everything after this page will use them: the *timeless* essays,
-which set out positions I consider settled; the *applied* essays, which take these two
-tools into contested ground and steelman the other side before answering it; and the
-*event horizon*, where I take positions under uncertainty and say so on every page.
+which set out positions I consider settled, and the *applied* essays, which take the tools of these first two essays into contested ground and make the other
+side's best case before answering it.
 
 *The applied essays are forthcoming. They will cite this page, and be held to it.*
+
+[^base]: The two assumptions' opening sentences, exactly: [A0.1](/assumptions#a0-1), "There is a way things
+    are, independent of what anyone believes about it"; and [A0.2](/assumptions#a0-2), "A
+    claim has content by making a specified difference in a declared kind of landscape."
+    This essay also uses [A0.D2](/assumptions#a0-d2), map and policy (section 5), and
+    [A0.P3](/assumptions#a0-p3), truth and publication (section 1).
+
+[^p3]: The precise principle, [A0.P3](/assumptions#a0-p3): "Whether a finding is true and
+    whether I should publish it are separate questions. Foreseeable harm can count against
+    publication without counting against the finding's truth. A decision to withhold or
+    limit my own publication needs a policy justification that considers the harms of
+    disclosure, the costs of withholding, and less harmful ways of communicating the
+    finding. Neither political discomfort nor a bare assertion of possible misuse settles
+    the decision. This supplies no automatic authority to prevent others from publishing."
+    The default: "because no one, including me, can reliably make the all-considerations
+    judgment to withhold, the default is to publish; withholding carries the burden of
+    justification, and where possible it is checked by someone other than the person
+    withholding." And: "No threshold is set, and outside checking is a preference, not a compulsory review."
+
+[^031]: The precise principle: "Reliable, relevant group statistics can inform predictions
+    about an individual. Their evidential weight depends on how well they apply to the case
+    and on the other evidence available; individual information does not automatically
+    override them. A probability is not a certainty, and a prediction alone does not settle
+    how someone may be treated. The justification for differential treatment requires a
+    separate policy argument."
+
+[^d2]: [A0.D2](/assumptions#a0-d2): "Map and policy are different registers and never trade places." And: "The map is refereed by reality; the policy is refereed by nothing but
+    whether it works, and may contain stances held for their effect -- provided they are
+    labelled as such." The curves are map; who pays because of them is policy.
 
 [^1]: Adult heights, United States. National Center for Health Statistics,
     *Anthropometric Reference Data for Children and Adults: United States, August
