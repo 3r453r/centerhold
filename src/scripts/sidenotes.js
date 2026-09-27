@@ -49,7 +49,8 @@ export function initSidenotes(doc = document, win = window) {
       e.preventDefault();
       if (article.classList.contains('notes-margin')) {
         aside.classList.add('flash');
-        win.setTimeout(() => aside.classList.remove('flash'), 900);
+        aside.scrollIntoView({ block: 'nearest' });
+        win.setTimeout(() => aside.classList.remove('flash'), 2500);
         return;
       }
       const open = aside.classList.toggle('open');
@@ -65,9 +66,11 @@ export function initSidenotes(doc = document, win = window) {
     const proseRect = prose.getBoundingClientRect();
     const gap = BREAKOUT_EM * parseFloat(win.getComputedStyle(prose).fontSize) + BREAKOUT_PAD;
     prose.style.setProperty('--note-gap', `${gap}px`);
-    const fits = marginFits(vw, proseRect.right, NOTE_MIN, gap, GUTTER);
+    // Notes off: no margin column; markers stay and open their note inline, as on a phone.
+    const fits =
+      !article.classList.contains('notes-off') && marginFits(vw, proseRect.right, NOTE_MIN, gap, GUTTER);
     article.classList.toggle('notes-margin', fits);
-    if (!fits || article.classList.contains('notes-off')) {
+    if (!fits) {
       for (const n of notes) n.aside.style.top = '';
       prose.style.minHeight = '';
       return;

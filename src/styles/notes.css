@@ -14,7 +14,9 @@
 .notes-toggle[aria-pressed='true'] { color: var(--gold); border-color: rgba(217, 164, 65, 0.35); }
 
 .notes-enhanced .footnotes { display: none; }
-.notes-enhanced [data-footnote-ref] { border-bottom: 0; font-family: var(--mono); font-size: 0.7em; padding: 0 0.15em; }
+.notes-enhanced [data-footnote-ref] { border-bottom: 0; font-family: var(--mono); font-size: 0.7em; padding: 0 0.15em; position: relative; }
+/* A 10px marker is hard to hit: widen the hit area, not the number. */
+.notes-enhanced [data-footnote-ref]::after { content: ''; position: absolute; inset: -9px -8px; }
 
 .sidenote { display: none; font-size: 0.82em; line-height: 1.55; color: var(--silt); }
 .sidenote p { margin: 0 0 0.5em; }
@@ -38,12 +40,14 @@
   left: calc(100% + var(--note-gap, 4em));
   width: var(--note-width, 280px);
   margin: 0;
-  transition: color 0.3s;
+  transition: color 0.3s, outline-color 0.3s;
 }
-.notes-margin .sidenote.flash { color: var(--ivory); }
-
-.notes-off .sidenote,
-.notes-off [data-footnote-ref] { display: none !important; }
+.notes-margin .sidenote.flash {
+  color: var(--ivory);
+  outline: 1px solid rgba(217, 164, 65, 0.55);
+  outline-offset: 6px;
+  border-radius: 2px;
+}
 
 /* The register's reader-prompted record: open questions, working results, change history. */
 .prose details.record { margin: 3em 0 0; border-top: 1px solid var(--hairline); padding-top: 1.2em; }

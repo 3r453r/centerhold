@@ -25,7 +25,7 @@ const teal = d.lane === 'timeless' || d.lane === 'event-horizon';
       <div class="eyebrow">
         <span class:list={['num', { 'lane-teal': teal }]}>{d.number}</span>
         <span class:list={{ 'lane-teal': teal }}>{laneLabel}</span>
-        <span class="date">{fmt(d.published)}{d.updated ? ` · revised ${fmt(d.updated)}` : ''}</span>
+        <span class="date">{fmt(d.published)}{d.updated ? ` · revised ${fmt(d.updated)}` : ''} · <span title="Pre-1.0: the wording may still change.">early access</span></span>
       </div>
       <h1>{d.title}</h1>
       <p class="lede">{d.description}</p>

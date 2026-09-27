@@ -16,6 +16,8 @@
   --mono: 'Spline Sans Mono', Consolas, monospace;
 }
 html { scroll-behavior: smooth; }
+/* Reading pages jump straight to anchors: a long smooth scroll reads as a broken link. */
+html:has(article.read) { scroll-behavior: auto; }
 body {
   margin: 0;
   background: var(--riverbed);
