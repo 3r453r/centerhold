@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import '../styles/notes.css';
 
 // The register is a single content entry with kind: register. Until it is
 // published, the page says what it will be and why it comes first.
@@ -19,6 +20,7 @@ const fmt = (x: Date) => x.toLocaleDateString('en-GB', { year: 'numeric', month:
         </div>
         <h1>{reg.data.title}</h1>
         <p class="lede">{reg.data.description}</p>
+        <button class="notes-toggle" type="button" aria-pressed="true" hidden>plain notes: on</button>
         <div class="prose">
           <rendered.Content />
         </div>
@@ -45,3 +47,21 @@ const fmt = (x: Date) => x.toLocaleDateString('en-GB', { year: 'numeric', month:
     )}
   </div>
 </Base>
+
+<script>
+  import { initSidenotes } from '../scripts/sidenotes.js';
+  initSidenotes();
+
+  // A link to an entry inside the closed record opens the record first.
+  const reveal = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const target = id && document.getElementById(id);
+    const record = target?.closest('details');
+    if (record && !record.open) {
+      record.open = true;
+      target.scrollIntoView();
+    }
+  };
+  reveal();
+  window.addEventListener('hashchange', reveal);
+</script>

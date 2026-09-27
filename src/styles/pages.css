@@ -14,13 +14,30 @@ body.page main { min-height: 60vh; }
   margin: 0 auto;
   padding: clamp(28px, 6vh, 70px) clamp(20px, 6vw, 90px) clamp(70px, 10vh, 120px);
 }
+/* A reading page lets the column set its own width (it outgrows 1100px on
+   large screens); the index keeps the 1100px frame. */
+.page-wrap:has(> .read) { max-width: none; }
 
-/* Reading column */
+/* Reading column.
+   The reading size is fluid: 18px up to 1280px wide, rising linearly to 26px
+   at 2560px (10px + 0.625vw), so on a 27" screen the type grows and the
+   column widens with it instead of shrinking to a strip.
+   The column is set on .read in the reading font, so the measure in ch tracks
+   the text: 56ch of Newsreader (its "0" is ~0.57em) is ~32em, which holds
+   ~70-75 characters per line at every size. Everything inside scales off
+   the reading size: small fixed labels are max(<old px>, <k>em) with
+   k = old/20, and the viewport-clamped display sizes add k * --grow, where
+   --grow is how far the reading size is above 20px (zero below ~1600px).
+   Both keep their old values on small screens and grow in proportion above.
+   The column stays centred; the side margins stay free (sidenotes later). */
 .read {
-  max-width: 68ch;
+  --read-size: clamp(18px, calc(10px + 0.625vw), 26px);
+  --grow: max(0px, calc(var(--read-size) - 20px));
+  font-size: var(--read-size);
+  max-width: 56ch;
   margin: 0 auto;
 }
-.read .eyebrow { margin-bottom: 26px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.read .eyebrow { margin-bottom: max(26px, 1.3em); display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-size: max(12px, 0.6em); }
 .read .eyebrow .num {
   border: 1px solid var(--gold);
   border-radius: 999px;
@@ -34,13 +51,13 @@ body.page main { min-height: 60vh; }
   margin: 0 0 22px;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(34px, 4.4vw, 58px);
+  font-size: calc(clamp(34px, 4.4vw, 58px) + 2.9 * var(--grow));
   line-height: 1.12;
   text-wrap: balance;
 }
 .read p.lede {
-  margin: 0 0 34px;
-  font-size: clamp(19px, 1.6vw, 23px);
+  margin: 0 0 max(34px, 1.7em);
+  font-size: calc(clamp(19px, 1.6vw, 23px) + 1.15 * var(--grow));
   line-height: 1.55;
   color: var(--silt);
 }
@@ -49,13 +66,13 @@ body.page main { min-height: 60vh; }
   flex-wrap: wrap;
   gap: 8px 14px;
   align-items: center;
-  margin: 0 0 44px;
+  margin: 0 0 max(44px, 2.2em);
   padding: 16px 20px;
   border: 1px solid var(--hairline);
   border-radius: 18px;
   background: rgba(16, 24, 32, 0.7);
   font-family: var(--mono);
-  font-size: 12.5px;
+  font-size: max(12.5px, 0.625em);
   letter-spacing: 1px;
   color: var(--silt);
 }
@@ -66,13 +83,13 @@ body.page main { min-height: 60vh; }
 }
 .read .speculative strong { color: var(--teal); font-weight: 600; }
 
-.prose { font-size: clamp(18px, 1.35vw, 20px); line-height: 1.75; color: #E4DED0; }
+.prose { font-size: 1em; line-height: 1.75; color: #E4DED0; }
 .prose p { margin: 0 0 1.35em; }
 .prose h2 {
   margin: 2.2em 0 0.7em;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(26px, 2.4vw, 34px);
+  font-size: calc(clamp(26px, 2.4vw, 34px) + 1.7 * var(--grow));
   line-height: 1.25;
 }
 .prose h3 {
@@ -122,24 +139,24 @@ body.page main { min-height: 60vh; }
 .prose pre code { background: none; padding: 0; }
 .prose table { width: 100%; border-collapse: collapse; margin: 0 0 1.5em; font-size: 0.92em; }
 .prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
-.prose th { font-family: var(--mono); font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--silt); font-weight: 500; }
+.prose th { font-family: var(--mono); font-size: max(12px, 0.65em); letter-spacing: 1.4px; text-transform: uppercase; color: var(--silt); font-weight: 500; }
 .prose img { max-width: 100%; height: auto; border-radius: 16px; }
 .prose .footnotes { margin-top: 3em; font-size: 0.88em; color: var(--silt); }
 .prose .footnotes hr { display: none; }
 
 .read .after {
-  margin-top: 60px;
-  padding-top: 30px;
+  margin-top: max(60px, 3em);
+  padding-top: max(30px, 1.5em);
   border-top: 1px solid var(--hairline);
   display: flex;
   flex-wrap: wrap;
   gap: 14px 30px;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: max(16px, 0.8em);
   font-style: italic;
 }
-.read .after .mono { font-family: var(--mono); font-style: normal; font-size: 12.5px; letter-spacing: 1.2px; color: var(--silt); }
+.read .after .mono { font-family: var(--mono); font-style: normal; font-size: max(12.5px, 0.78em); letter-spacing: 1.2px; color: var(--silt); }
 
 /* Index */
 .index-head { max-width: 40em; margin-bottom: 54px; }
@@ -194,7 +211,7 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
   border: 1px solid var(--hairline);
   border-radius: 28px;
   background: rgba(16, 24, 32, 0.9);
-  font-size: clamp(17px, 1.35vw, 19px);
+  font-size: calc(clamp(17px, 1.35vw, 19px) + 0.95 * var(--grow));
   line-height: 1.7;
   color: #DFD9CB;
 }
@@ -202,7 +219,7 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
 .register-note p:last-child { margin-bottom: 0; }
 .register-note .pull {
   font-family: var(--display);
-  font-size: clamp(22px, 2.1vw, 28px);
+  font-size: calc(clamp(22px, 2.1vw, 28px) + 1.4 * var(--grow));
   line-height: 1.35;
   color: var(--gold);
 }
@@ -218,9 +235,9 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
 /* Register table (A0, "at a glance") */
 .register-table { overflow-x: auto; margin: 0 0 1.6em; }
 .register-table table { font-size: 0.86em; }
-.register-table td:first-child a { font-family: var(--mono); font-size: 12px; letter-spacing: 1.2px; border-bottom: 0; }
+.register-table td:first-child a { font-family: var(--mono); font-size: max(12px, 0.7em); letter-spacing: 1.2px; border-bottom: 0; }
 .register-table td:nth-child(3), .register-table td:nth-child(4), .register-table td:nth-child(5) {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 1px; color: var(--silt); white-space: nowrap;
+  font-family: var(--mono); font-size: max(12px, 0.7em); letter-spacing: 1px; color: var(--silt); white-space: nowrap;
 }
 .register-table td:nth-child(2) { min-width: 12em; }
 .register-table td:nth-child(5) { white-space: normal; }
@@ -239,12 +256,12 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
 .argmap p { margin: 0; }
 .argmap p + p { margin-top: 10px; }
 .argmap .plus, .argmap .arrow {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--silt);
+  font-family: var(--mono); font-size: max(12px, 0.65em); letter-spacing: 1.6px; text-transform: uppercase; color: var(--silt);
 }
 .argmap .tag {
   display: inline-block; margin-right: 10px; padding: 2px 9px;
   border-radius: 999px; border: 1px solid var(--hairline);
-  font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; vertical-align: 2px;
+  font-family: var(--mono); font-size: max(11px, 0.6em); letter-spacing: 1.4px; text-transform: uppercase; vertical-align: 2px;
 }
 .argmap .tag.map { color: var(--teal); border-color: var(--teal); }
 .argmap .tag.policy { color: var(--gold); border-color: var(--gold); }
@@ -262,14 +279,14 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
 }
 .calc p { margin: 0 0 0.9em; }
 .calc p:last-child { margin-bottom: 0; }
-.calc .calc-title { font-family: var(--mono); font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--silt); }
+.calc .calc-title { font-family: var(--mono); font-size: max(12px, 0.65em); letter-spacing: 1.6px; text-transform: uppercase; color: var(--silt); }
 .calc table { margin: 0 0 1em; font-size: 0.95em; }
 .calc td { padding: 8px 10px; }
 .calc td.num { font-family: var(--mono); text-align: right; white-space: nowrap; color: var(--ivory); }
 
 /* Figures */
 .prose figure.fig { margin: 2em 0; }
-.prose figure.fig img { display: block; width: 100%; height: auto; border: 1px solid var(--hairline); border-radius: 18px; }
+.prose figure.fig img { display: block; box-sizing: border-box; width: 100%; height: auto; border: 1px solid var(--hairline); border-radius: 18px; }
 .prose figure.fig figcaption { margin-top: 12px; font-size: 0.86em; line-height: 1.55; color: var(--silt); }
 .prose figure.fig figcaption strong { color: var(--ivory); }
 
@@ -279,5 +296,16 @@ a.entry:hover { border-color: var(--gold); color: var(--ivory); }
 .prose .footnotes ol { padding-left: 1.6em; }
 .prose .footnotes li { margin: 0.6em 0; }
 .prose .footnotes p { margin: 0 0 0.5em; }
+.prose sup { line-height: 0; } /* a reference mark must not open the line below it */
 .prose sup a[data-footnote-ref] { border-bottom: 0; font-family: var(--mono); font-size: 0.7em; padding: 0 2px; }
 .prose a[data-footnote-backref] { border-bottom: 0; }
+
+/* Wide material (the register table, figures) may bleed a little past the
+   text column on both sides -- at most 3em, never into the page gutter --
+   so the table's claim column has room. Mobile keeps the plain column. */
+@media (min-width: 900px) {
+  .prose .register-table, .prose figure.fig {
+    margin-left: calc(-1 * min(3em, max(0px, (100vw - 100%) / 2 - 40px)));
+    margin-right: calc(-1 * min(3em, max(0px, (100vw - 100%) / 2 - 40px)));
+  }
+}

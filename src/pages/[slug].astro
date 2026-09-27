@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import '../styles/notes.css';
 
 export async function getStaticPaths() {
   const essays = await getCollection('essays', ({ data }) => data.kind === 'essay');
@@ -41,6 +42,7 @@ const teal = d.lane === 'timeless' || d.lane === 'event-horizon';
           {d.number !== '01' && d.number !== '02' && <a href="/statistics">02 &middot; Statistics</a>}
         </div>
       )}
+      <button class="notes-toggle" type="button" aria-pressed="true" hidden>precise notes: on</button>
       <div class="prose">
         <Content />
       </div>
@@ -52,3 +54,8 @@ const teal = d.lane === 'timeless' || d.lane === 'event-horizon';
     </article>
   </div>
 </Base>
+
+<script>
+  import { initSidenotes } from '../scripts/sidenotes.js';
+  initSidenotes();
+</script>
