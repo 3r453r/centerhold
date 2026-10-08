@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
 const all = (await getCollection('essays')).sort(
-  (a, b) => a.data.published.valueOf() - b.data.published.valueOf(),
+  (a, b) => a.data.published.valueOf() - b.data.published.valueOf() || a.data.number.localeCompare(b.data.number),
 );
 const href = (e: (typeof all)[number]) => (e.data.kind === 'register' ? '/assumptions' : `/${e.id}`);
 const fmt = (d: Date) => d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -17,9 +17,22 @@ const founding = [
 ];
 const foundations = founding.map((f) => ({ ...f, entry: all.find((e) => e.data.number === f.number) }));
 
-const lanes: { key: 'timeless' | 'applied' | 'event-horizon'; label: string; note: string }[] = [
+const lanes: { key: 'timeless' | 'methods' | 'applied' | 'event-horizon'; label: string; note: string; intro?: string }[] = [
   { key: 'timeless', label: 'timeless', note: 'settled positions, set out for a general reader' },
-  { key: 'applied', label: 'applied', note: 'contested ground, derived from the foundations, opposition steelmanned first' },
+  {
+    key: 'methods',
+    label: 'methods',
+    note: 'how the work gets done, and what that does to its credit',
+  },
+  {
+    key: 'applied',
+    label: 'applied',
+    note: 'contested ground, derived from the foundations, opposition steelmanned first',
+    // Adam's ruling, 2026-10-07: one standing paragraph here closes the gap between the
+    // foundations and the timely essays; no bridging essay. Draft copy, his to edit.
+    intro:
+      'The essays from here on are applications. Each takes a question that is live this year and works it with the tools the foundations set out: a claim answers to the way things are, a distribution is not a verdict, and a rule that binds people must survive their scrutiny. They are more timely than the foundations, and they will date faster. The foundations will not.',
+  },
 ];
 ---
 <Base title="Essays" description="The foundations arc, then the lanes: timeless and applied.">
@@ -63,6 +76,7 @@ const lanes: { key: 'timeless' | 'applied' | 'event-horizon'; label: string; not
       return (
         <section class="lane" id={lane.key}>
           <div class="eyebrow">{lane.label} &middot; {lane.note}</div>
+          {lane.intro && <div class="lane-note"><p>{lane.intro}</p></div>}
           {entries.length ? (
             <ol class="lane-list">
               {entries.map((e) => (

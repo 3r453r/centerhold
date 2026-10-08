@@ -1,0 +1,226 @@
+/* Reading-surface colour schemes, 2026-10-07 (Adam: "use both as light/dark schemes";
+   the landing page stays as it is). `data-theme` on <html> is `paper` (light) or
+   `night` (dark), set before paint by the script in Base.astro from the viewer's
+   remembered choice or the system preference; the header button flips it.
+
+   Shared fixes (every direction): the header, nav, footer and index scale with
+   the viewport the way the reading column does; the duplicate "builds on" box
+   goes (the essay text opens with the same line); .register-note's --grow
+   is defined where it is used. */
+
+:root {
+  --ui-size: clamp(18px, calc(10px + 0.625vw), 26px);
+  --ui-grow: max(0px, calc(var(--ui-size) - 20px));
+}
+header.site { padding: calc(clamp(16px, 2.4vw, 26px) + 0.6 * var(--ui-grow)) calc(clamp(20px, 5vw, 72px) + 2 * var(--ui-grow)); }
+.wordmark span { font-size: calc(clamp(21px, 2vw, 27px) + 1.2 * var(--ui-grow)); }
+.wordmark svg { width: calc(36px + 1.6 * var(--ui-grow)); height: auto; }
+nav.site { font-size: calc(12.5px + 0.55 * var(--ui-grow)); gap: calc(clamp(14px, 2.4vw, 32px) + 1.2 * var(--ui-grow)); }
+nav.site a.pill { padding: calc(12px + 0.5 * var(--ui-grow)) calc(24px + var(--ui-grow)); }
+footer.site .tag { font-size: calc(15px + 0.7 * var(--ui-grow)); }
+footer.site nav { font-size: calc(13px + 0.55 * var(--ui-grow)); }
+.page-wrap:not(:has(> .read)) { max-width: calc(1100px + 22 * var(--ui-grow)); }
+.index-head h1 { font-size: calc(clamp(34px, 4.4vw, 56px) + 2.6 * var(--ui-grow)); }
+.index-head p { font-size: calc(clamp(17px, 1.4vw, 20px) + var(--ui-grow)); }
+.lane .eyebrow { font-size: calc(12px + 0.55 * var(--ui-grow)); }
+.entry { grid-template-columns: calc(74px + 3 * var(--ui-grow)) 1fr; }
+.entry .num { font-size: calc(12px + 0.55 * var(--ui-grow)); }
+.entry h3 { font-size: calc(clamp(19px, 1.6vw, 22px) + 1.1 * var(--ui-grow)); }
+.entry p { font-size: calc(16px + 0.8 * var(--ui-grow)); }
+.entry .meta { font-size: calc(12px + 0.55 * var(--ui-grow)); }
+.lane-note { max-width: 44em; margin: 18px 0 26px; font-size: calc(17px + 0.85 * var(--ui-grow)); line-height: 1.6; color: var(--silt); }
+.lane-note p { margin: 0 0 0.9em; }
+.register-note { --grow: var(--ui-grow); }
+.read .builds-on:not(.speculative) { display: none; }
+
+/* ------------------------------------------------------------------ */
+/* B. Paper: the river at night above, a lit page below.               */
+/* ------------------------------------------------------------------ */
+html[data-theme="paper"] {
+  --paper: #EDE7D9;
+  --paper-deep: #E4DCCB;
+  --ink: #141B22;
+  --ink-head: #0E141A;
+  --ink-note: #5E6971;
+  --ink-link: #8F6418;
+  --ink-link-hover: #6E4C10;
+  --ink-numeral: #B8862B;
+  --ink-teal: #2E6B60;
+  --paper-rule: #D6CDBA;
+}
+html[data-theme="paper"] body.page {
+  background: var(--paper);
+  color: var(--ink);
+}
+html[data-theme="paper"] body.page main { background: var(--paper); }
+/* The header keeps the river: a dark band the page hangs from. */
+html[data-theme="paper"] body.page header.site {
+  background: var(--riverbed);
+  box-shadow: 0 1px 0 rgba(14, 20, 26, 0.35);
+}
+html[data-theme="paper"] body.page footer.site { border-top-color: transparent; }
+html[data-theme="paper"] body.page a { color: var(--ink-link); }
+html[data-theme="paper"] body.page a:hover { color: var(--ink-link-hover); }
+html[data-theme="paper"] body.page header.site a { color: var(--silt); }
+html[data-theme="paper"] body.page header.site a:hover,
+html[data-theme="paper"] body.page header.site .wordmark { color: var(--ivory); }
+html[data-theme="paper"] body.page nav.site a.pill { color: var(--gold); }
+html[data-theme="paper"] body.page nav.site a.pill:hover { color: var(--riverbed); }
+html[data-theme="paper"] body.page footer.site a { color: var(--silt); }
+html[data-theme="paper"] body.page a:focus-visible,
+html[data-theme="paper"] body.page button:focus-visible { outline-color: var(--ink-link); }
+
+/* Reading column */
+html[data-theme="paper"] .read .eyebrow {
+  font-family: var(--body);
+  font-style: italic;
+  text-transform: none;
+  line-height: 1.4;
+  row-gap: 2px;
+  font-size: max(16px, 0.85em);
+  letter-spacing: 0;
+  color: var(--ink-note);
+  gap: 0 0.45em;
+}
+html[data-theme="paper"] .read .eyebrow .num {
+  border: 0;
+  padding: 0;
+  letter-spacing: 0;
+  font-style: normal;
+  font-family: var(--display);
+  color: var(--ink-head);
+}
+html[data-theme="paper"] .read .eyebrow .lane-teal { color: var(--ink-teal); }
+html[data-theme="paper"] .read .eyebrow .date { flex-basis: 100%; margin-top: 2px; color: var(--ink-note); letter-spacing: 0; }
+html[data-theme="paper"] .read h1 { color: var(--ink-head); }
+html[data-theme="paper"] .read p.lede { color: var(--ink-note); }
+html[data-theme="paper"] .prose { color: var(--ink); }
+html[data-theme="paper"] .prose h2, html[data-theme="paper"] .prose h3 { color: var(--ink-head); }
+html[data-theme="paper"] .prose strong { color: var(--ink-head); }
+html[data-theme="paper"] .prose a { color: var(--ink-link); border-bottom-color: rgba(143, 100, 24, 0.35); }
+html[data-theme="paper"] .prose a:hover { color: var(--ink-link-hover); border-bottom-color: var(--ink-link-hover); }
+html[data-theme="paper"] .prose blockquote { border-left-color: var(--ink-teal); color: var(--ink); }
+html[data-theme="paper"] .prose li::marker { color: var(--ink-numeral); }
+html[data-theme="paper"] .prose hr { background: linear-gradient(90deg, rgba(184, 134, 43, 0) 0%, var(--ink-numeral) 30%, var(--ink-teal) 70%, rgba(46, 107, 96, 0) 100%); }
+html[data-theme="paper"] .prose code { background: rgba(14, 20, 26, 0.06); }
+html[data-theme="paper"] .prose pre,
+html[data-theme="paper"] .argmap,
+html[data-theme="paper"] .calc { background: var(--paper-deep); border-color: var(--paper-rule); }
+html[data-theme="paper"] .prose th, html[data-theme="paper"] .prose td { border-bottom-color: var(--paper-rule); }
+html[data-theme="paper"] .prose th, html[data-theme="paper"] .argmap .plus, html[data-theme="paper"] .argmap .arrow,
+html[data-theme="paper"] .calc .calc-title, html[data-theme="paper"] .register-table td:nth-child(n+3) { color: var(--ink-note); }
+html[data-theme="paper"] .argmap .tag { border-color: var(--paper-rule); }
+html[data-theme="paper"] .argmap .tag.map { color: var(--ink-teal); border-color: var(--ink-teal); }
+html[data-theme="paper"] .argmap .tag.policy { color: var(--ink-link); border-color: var(--ink-link); }
+html[data-theme="paper"] .argmap em { color: var(--ink-note); }
+html[data-theme="paper"] .calc td.num { color: var(--ink-head); }
+html[data-theme="paper"] .register-table td strong { color: var(--ink-link); }
+html[data-theme="paper"] .prose figure.fig img { border-color: var(--paper-rule); background: #fff; }
+html[data-theme="paper"] .prose figure.fig figcaption { color: var(--ink-note); }
+html[data-theme="paper"] .prose figure.fig figcaption strong { color: var(--ink-head); }
+html[data-theme="paper"] .prose .footnotes { color: var(--ink-note); border-top-color: var(--paper-rule); }
+html[data-theme="paper"] .prose sup a[data-footnote-ref] { color: var(--ink-numeral); font-family: var(--body); font-style: italic; font-size: 0.72em; }
+html[data-theme="paper"] .read .after { border-top-color: var(--paper-rule); }
+html[data-theme="paper"] .read .after .mono { color: var(--ink-note); }
+html[data-theme="paper"] .read .speculative { border-color: var(--ink-teal); color: var(--ink); background: var(--paper-deep); }
+html[data-theme="paper"] .read .speculative strong { color: var(--ink-teal); }
+
+/* Notes: pencil in the margin */
+html[data-theme="paper"] .notes-toggle { border-color: var(--paper-rule); color: var(--ink-note); font-family: var(--body); font-style: italic; font-size: max(14px, 0.75em); letter-spacing: 0; }
+html[data-theme="paper"] .notes-toggle[aria-pressed='true'] { color: var(--ink-link); border-color: rgba(143, 100, 24, 0.4); }
+html[data-theme="paper"] .sidenote { color: var(--ink-note); }
+html[data-theme="paper"] .sidenote-num { color: var(--ink-numeral); font-family: var(--body); font-style: italic; }
+html[data-theme="paper"] .notes-enhanced:not(.notes-margin) .sidenote.open { border-left-color: var(--ink-numeral); background: rgba(14, 20, 26, 0.04); }
+html[data-theme="paper"] .notes-margin .sidenote.flash { color: var(--ink-head); outline-color: rgba(143, 100, 24, 0.55); }
+html[data-theme="paper"] .notes-enhanced [data-footnote-ref] { font-family: var(--body); font-style: italic; }
+html[data-theme="paper"] .prose details.record { border-top-color: var(--paper-rule); }
+html[data-theme="paper"] .prose details.record > summary { color: var(--ink-note); font-family: var(--body); font-style: italic; letter-spacing: 0; font-size: max(15px, 0.8em); }
+html[data-theme="paper"] .prose details.record > summary::before { color: var(--ink-numeral); }
+
+/* Index and register placeholder on paper */
+html[data-theme="paper"] .index-head p, html[data-theme="paper"] .lane-note { color: var(--ink-note); }
+html[data-theme="paper"] .lane .eyebrow { color: var(--ink-link); }
+html[data-theme="paper"] .lane .eyebrow::after { background: var(--paper-rule); }
+html[data-theme="paper"] .entry { background: transparent; border-color: var(--paper-rule); color: var(--ink); border-radius: 4px; }
+html[data-theme="paper"] a.entry:hover { border-color: var(--ink-link); color: var(--ink); }
+html[data-theme="paper"] .entry .num { border-color: var(--ink-numeral); color: var(--ink-numeral); }
+html[data-theme="paper"] .entry.teal .num { border-color: var(--ink-teal); color: var(--ink-teal); }
+html[data-theme="paper"] .entry p, html[data-theme="paper"] .entry .meta { color: var(--ink-note); }
+html[data-theme="paper"] .entry.forthcoming .meta { color: var(--ink-teal); }
+html[data-theme="paper"] .register-note { background: var(--paper-deep); border-color: var(--paper-rule); color: var(--ink); }
+html[data-theme="paper"] .register-note .pull { color: var(--ink-link); }
+
+/* ------------------------------------------------------------------ */
+/* C. Night, structured: the dark surface with the sections marked.    */
+/* ------------------------------------------------------------------ */
+html[data-theme="night"] .prose { color: #E8E1D2; }
+html[data-theme="night"] .read .eyebrow {
+  font-family: var(--body);
+  font-style: italic;
+  text-transform: none;
+  line-height: 1.4;
+  row-gap: 2px;
+  font-size: max(16px, 0.85em);
+  letter-spacing: 0;
+  color: var(--silt);
+  gap: 0 0.45em;
+}
+html[data-theme="night"] .read .eyebrow .num { border: 0; padding: 0; letter-spacing: 0; font-style: normal; font-family: var(--display); color: var(--ivory); }
+html[data-theme="night"] .read .eyebrow .date { flex-basis: 100%; margin-top: 2px; letter-spacing: 0; }
+html[data-theme="night"] .prose h2 {
+  position: relative;
+  margin-top: 2.8em;
+  padding-top: 1.1em;
+}
+html[data-theme="night"] .prose h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6.5em;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--teal) 70%, rgba(63, 133, 120, 0) 100%);
+}
+@media (min-width: 1100px) {
+  html[data-theme="night"] .prose h2 { margin-left: -2.2em; }
+}
+html[data-theme="night"] .prose > p > strong { font-size: 1.04em; }
+html[data-theme="night"] .notes-toggle { font-family: var(--body); font-style: italic; font-size: max(14px, 0.75em); letter-spacing: 0; }
+html[data-theme="night"] .sidenote-num, html[data-theme="night"] .prose sup a[data-footnote-ref], html[data-theme="night"] .notes-enhanced [data-footnote-ref] { font-family: var(--body); font-style: italic; }
+html[data-theme="night"] .read .after .mono { font-family: var(--body); font-style: italic; letter-spacing: 0; font-size: max(15px, 0.8em); }
+html[data-theme="night"] .entry { border-radius: 4px; background: transparent; }
+html[data-theme="night"] .prose details.record > summary { font-family: var(--body); font-style: italic; letter-spacing: 0; font-size: max(15px, 0.8em); }
+
+/* Scheme toggle in the header: reading pages only; the landing keeps the river. */
+button.scheme {
+  font: italic calc(14px + 0.6 * var(--ui-grow))/1 var(--body);
+  color: var(--silt);
+  background: none;
+  border: 0;
+  padding: 10px 2px;
+  cursor: pointer;
+}
+button.scheme:hover { color: var(--ivory); }
+body.landing button.scheme { display: none; }
+html[data-theme="night"] button.scheme .to-dark { display: none; }
+html[data-theme="paper"] button.scheme .to-light { display: none; }
+html:not([data-theme]) button.scheme { visibility: hidden; }
+html[data-theme="paper"] body.page { color-scheme: light; }
+html[data-theme="night"] body.page { color-scheme: dark; }
+
+/* Index chrome in both schemes: the small type leaves mono caps for italic serif, no pills. */
+html[data-theme="paper"] .lane .eyebrow, html[data-theme="night"] .lane .eyebrow {
+  font-family: var(--body); font-style: italic; text-transform: none; letter-spacing: 0;
+  font-size: calc(17px + 0.85 * var(--ui-grow));
+}
+html[data-theme="paper"] .entry .num, html[data-theme="night"] .entry .num {
+  border: 0; padding: 4px 0 0; text-align: left; font-family: var(--display); letter-spacing: 0;
+  font-size: calc(20px + var(--ui-grow));
+}
+html[data-theme="paper"] .entry .meta, html[data-theme="night"] .entry .meta {
+  font-family: var(--body); font-style: italic; letter-spacing: 0; font-size: calc(15px + 0.7 * var(--ui-grow));
+}
+html[data-theme="paper"] .entry, html[data-theme="night"] .entry { border-radius: 0; border-width: 0 0 1px; padding: 22px 4px; }
+html[data-theme="paper"] .lane-list, html[data-theme="night"] .lane-list { gap: 0; }
+html[data-theme="paper"] .entry h3, html[data-theme="night"] .entry h3 { font-family: var(--display); font-weight: 400; }
+html[data-theme="paper"] .entry.forthcoming .num, html[data-theme="night"] .entry.forthcoming .num { border: 0; opacity: 0.6; }

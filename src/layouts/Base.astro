@@ -1,6 +1,7 @@
 ---
 import '../styles/site.css';
 import '../styles/pages.css';
+import '../styles/themes.css';
 
 interface Props {
   title?: string;
@@ -43,6 +44,18 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Spline+Sans+Mono:wght@400;500;600&display=swap"
     />
+    <script is:inline>
+      // Colour scheme for the reading pages (Adam, 2026-10-07: paper is the light
+      // scheme, night the dark one; the landing page stays as it is). The viewer's
+      // choice is remembered; otherwise the system preference decides.
+      (function () {
+        try {
+          var pick = localStorage.getItem('centrehold.scheme');
+          var dark = pick ? pick === 'dark' : !window.matchMedia('(prefers-color-scheme: light)').matches;
+          document.documentElement.setAttribute('data-theme', dark ? 'night' : 'paper');
+        } catch (e) { document.documentElement.setAttribute('data-theme', 'night'); }
+      })();
+    </script>
     <slot name="head" />
   </head>
   <body class={surface}>
@@ -61,6 +74,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           <a href="/assumptions">assumptions</a>
           <a href="/about">about</a>
           <a class="pill" href="/subscribe">subscribe</a>
+          <button class="scheme" type="button" aria-label="Switch colour scheme" title="Light or dark">
+            <span class="to-light">light</span><span class="to-dark">dark</span>
+          </button>
         </nav>
       </header>
       <slot />
@@ -73,5 +89,28 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <a href="https://github.com/3r453r/centerhold">source</a>
       </nav>
     </footer>
+    <script is:inline>
+      (function () {
+        var btn = document.querySelector('button.scheme');
+        if (!btn) return;
+        var root = document.documentElement;
+        var apply = function (dark) {
+          root.setAttribute('data-theme', dark ? 'night' : 'paper');
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', dark && !document.body.classList.contains('landing') ? '#0E141A' : document.body.classList.contains('landing') ? '#0E141A' : '#EDE7D9');
+        };
+        btn.addEventListener('click', function () {
+          var dark = root.getAttribute('data-theme') !== 'night';
+          try { localStorage.setItem('centrehold.scheme', dark ? 'dark' : 'light'); } catch (e) {}
+          apply(dark);
+        });
+        try {
+          window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (ev) {
+            if (!localStorage.getItem('centrehold.scheme')) apply(!ev.matches);
+          });
+        } catch (e) {}
+        apply(root.getAttribute('data-theme') === 'night');
+      })();
+    </script>
   </body>
 </html>
