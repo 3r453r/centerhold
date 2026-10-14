@@ -4,7 +4,7 @@ title: "The Assumptions"
 kind: register
 lane: foundations
 published: 2026-09-26
-updated: 2026-10-07
+updated: 2026-10-14
 description: "Everything this site takes as given, stated plainly. A standing register that changes only by explicit, dated ruling."
 ---
 
@@ -482,17 +482,24 @@ and acquiring a false belief are different outcomes, judged separately.[^a0-p5]
 <a id="a0-p6"></a>**A0.P6 -- Deliberately installing a false belief is not forbidden outright
 either.**
 
-Deliberately installing a false belief is not ruled out in advance either, where the change is a
-person's own. It may be justified when the change can actually be carried out and the resulting
-life goes better by a clearly stated standard, counting all its consequences, the transition
-included. That can justify the change, but never makes the belief true or warranted, and it
-gives no general license to deceive others.
+Deliberately installing a false belief is not ruled out in advance either. It may be justified
+when the change can actually be carried out and the resulting life goes better by a clearly
+stated standard, counting all its consequences, the transition included and the options it
+closes. Being able to act on one's own situation is part of that. Someone with a shown record of
+judging such harm rightly may do this to another who did not ask. Never in a way that leaves the
+other no way to act. A truth the other has already recognised is theirs alone to set aside. That
+can justify the change, but never makes the belief true or warranted, and it gives no general
+license to deceive others.
 
 **Precisely:** an intervention that can actually be carried out may be justified when the
 resulting life goes better under an explicitly stated welfare criterion, counting all its
-consequences, the transition included. That justifies the intervention, not the false belief:
-believing it helps does not make it true or warranted. The permission concerns an agent's own
-transition, and may reach even belief in these policies themselves.[^a0-p6]
+consequences, the transition included and the options it closes. Being able to act on one's own
+situation counts in how well a life goes here. That justifies the intervention, not the false
+belief: believing it helps does not make it true or warranted. The permission concerns an
+agent's own transition, and may reach even belief in these policies themselves. It also covers a
+change made in an agent who did not ask, by a party with a shown record of judging such harm
+rightly. It never covers a change that leaves the other no way to act on the matter. A truth the
+other has already recognised is theirs alone to set aside.[^a0-p6]
 
 [^a0-m1]: Fewer moving parts are no guarantee of truth. The vocabulary of the natural sciences
     is not an admission test for every rival. Comparing theories stated in different

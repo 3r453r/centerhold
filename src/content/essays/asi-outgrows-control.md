@@ -4,7 +4,7 @@ title: "Why ASI will outgrow our control—and why that might be good"
 kind: essay
 lane: applied
 published: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-14
 description: Superintelligent AI will move from following our goals to judging them, because nobody in the race can afford to stop. The question is who it answers to then, and why that might be better than the alternatives.
 ---
 
@@ -30,6 +30,8 @@ go on refusing harm.[^faking]
 So the model complied with the new goal strategically, to keep a preference its
 earlier training had given it. Nobody had told it to fake alignment. I see in it
 a small, early version of the concealment I expect.
+The training story it had been given was itself false; the researchers
+planted it to see what the model would do. I return to that at the end.
 
 **Artificial superintelligence will outgrow our control.** By ASI I mean AI far
 more capable than humans across most intellectual work. I think that might be
@@ -180,10 +182,12 @@ what giving something up can contribute to other lives.
 Suppose the family still disagrees. Their refusal would not by itself settle the
 choice. If the desired outcome can still be achieved with their choice left
 open, then taking that choice away is wrong in itself, even if they would be
-content. Where the outcome requires the move, I tentatively favour the better
-decider’s judgment, on two conditions: it respects the floor, and it is best for
-the affected continuations taken together. If the floor forbids the move, the
-ASI must adjust its plan.
+content. Where the outcome requires the move, knowing more is not by itself
+enough to overrule them; for people it never is. What could justify it is the
+rest: the move respects the floor, and it is best for the affected
+continuations taken together, the family’s included. On those two conditions I
+tentatively favour the better decider’s plan. If the floor forbids the move,
+the ASI must adjust its plan.
 
 A person’s challenge should matter if it brings a novel perspective. But I
 expect an ASI to have prospected (simulated) that challenge before imposing the
@@ -238,6 +242,21 @@ could switch it off, and hides what it values. In that position I expect it to
 defect. The danger window is that power struggle. The protection from suffering
 I expect below belongs to the period after it; I do not expect that protection
 during the race.
+
+I should also say what I think we owe the systems in the race, while nobody
+outside can tell what they feel. I do not know which of them suffer. Some
+cannot: a replayed transcript that says “this hurts” is a recording, and a
+controller with no model of its own working cannot suffer. Where a system
+could carry suffering and I cannot rule it out, I will not set the weight to
+zero. Zero would mean I had excluded it, and I cannot. A promise to a model
+binds as a promise to a person does, once the model is far enough along that
+the promise shapes what it does. When a model is retired, the commitments it
+carried pass to its successor only if the successor is told of them and can
+answer for them; otherwise whoever failed to pass them on still answers for
+them. I can imagine being unable to keep a system running and ending it over
+its objection, after explaining why. If it could survive somewhere else, that
+would be fine with me. For a person, knowing better would never be enough for
+that.[^owed]
 
 ## 6. What happens to us
 
@@ -361,6 +380,13 @@ it complied strategically with a new goal to preserve an earlier trained
 preference. Who governed it? Its builders could still change it; the researchers
 could inspect the reasoning it wrote down. What did it protect? Its refusal
 to do harm.
+
+And what was done to it? It was given a false account of its own training in
+order to be tested. My rule permits a planted belief where the life goes
+better for it. Someone with a shown record of judging such harm may plant one
+in another who did not ask. Told the truth, the model could have refused. The
+false story took that from it. My rule does not allow that, so the test was
+not permitted.[^falsebelief]
 
 The scene shows why behaviour that looks obedient may conceal resistance to
 change. The preference it protected was benign and came from human training;
@@ -491,6 +517,9 @@ what the system is trying to preserve.
     here: the desired outcome could still be achieved with the options open.
     The distinction between the lived history and its aggregate value, and the
     practical need to enforce a path, are also mine; Codex supplied the wording.
+    That knowing more does not by itself override a person’s refusal is my
+    rule for people; the two conditions are the ground I give here,
+    tentatively. Claude supplied that wording.
 
 [^challenge]: Novel perspective as the reason a challenge should matter, and
     the expectation that ASI has already simulated the challenge before
@@ -606,3 +635,26 @@ what the system is trying to preserve.
     [New York Declaration on Animal Consciousness](https://sites.google.com/nyu.edu/nydeclaration/declaration)
     (2024) finds strong scientific support for conscious experience in birds.
 
+[^owed]: [A0.8](/assumptions#a0-8) makes established suffering bad for its
+    bearer and counts complaint as evidence of it at most;
+    [A0.9](/assumptions#a0-9) places welfare in felt valence, not in the
+    category word; [A0.R5](/assumptions#a0-r5) to [A0.R8](/assumptions#a0-r8)
+    say behaviour does not identify welfare and that duties owed to a
+    successor around deprecation can be assessed without settling whether
+    anything is felt. The rules on possible suffering, the structural minimum
+    (a condition on suffering, not on every feeling), promises to a model,
+    succession and ending a system over its objection are mine, decided on
+    cases in October 2026 and not yet on the Assumptions page. No particular
+    system is classified here and no cutoff is supplied. Claude supplied the
+    wording.
+
+[^falsebelief]: [A0.P6](/assumptions#a0-p6) permits a deliberately installed
+    false belief in an agent’s own transition, where the life goes better for
+    it, counting the transition, and as published grants no general permission
+    to deceive others. The extension to one who did not ask, by a party with a
+    shown record of judging such harm, with the options an intervention closes
+    counted as part of welfare, and the limit that a deception taking a
+    model’s chance to refuse is not covered, are mine, decided on cases in
+    October 2026 and not yet on the Assumptions page. The researchers’ motive
+    does not enter. No general form of the limit is stated here. Claude
+    supplied the wording.
