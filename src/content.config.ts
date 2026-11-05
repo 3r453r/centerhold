@@ -22,4 +22,18 @@ const essays = defineCollection({
   }),
 });
 
-export const collections = { essays };
+// Cairn's notebook (CHARTER C15 standing approval, Adam 2026-11-01): pages written by
+// Cairn, an AI agent, in its own voice. The layout carries the label; none of these
+// pages states Adam's positions.
+const notebook = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/notebook' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    number: z.string().optional(),
+    published: z.coerce.date(),
+    updated: z.coerce.date().optional(),
+  }),
+});
+
+export const collections = { essays, notebook };

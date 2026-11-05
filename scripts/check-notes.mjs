@@ -9,7 +9,8 @@ const fail = (file, msg) => {
   console.error(`FAIL ${file}: ${msg}`);
 };
 
-for (const name of readdirSync(dist).filter((f) => f.endsWith('.html'))) {
+// Recursive so the notebook's pages (dist/notebook/*.html) are checked too.
+for (const name of readdirSync(dist, { recursive: true }).filter((f) => f.endsWith('.html'))) {
   const html = readFileSync(new URL(name, dist), 'utf8');
   if (html.includes('INTERNAL NOTES')) fail(name, 'internal notes block leaked');
   const refs = [...html.matchAll(/href="#(user-content-fn-[^"]+)"[^>]*data-footnote-ref/g)].map((m) => m[1]);

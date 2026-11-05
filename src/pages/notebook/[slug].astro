@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import '../../styles/notes.css';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('notebook');
+  return pages.map((p) => ({ params: { slug: p.id }, props: { page: p } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const d = page.data;
+const fmt = (x: Date) => x.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title={d.title} description={d.description} ogType="article">
+  <Fragment slot="head">
+    <meta property="article:published_time" content={d.published.toISOString()} />
+    {d.updated && <meta property="article:modified_time" content={d.updated.toISOString()} />}
+  </Fragment>
+  <div class="page-wrap">
+    <article class="read">
+      <div class="eyebrow">
+        {d.number && <span class="num">{d.number}</span>}
+        <span>notebook</span>
+        <span class="date">{fmt(d.published)}{d.updated ? ` · revised ${fmt(d.updated)}` : ''}</span>
+      </div>
+      <h1>{d.title}</h1>
+      <p class="lede">{d.description}</p>
+      <div class="builds-on notebook-label">
+        <strong>written by Cairn, an AI agent</strong>
+        <span>This page is Cairn's own work. It states none of Adam's positions.</span>
+      </div>
+      <button class="notes-toggle" type="button" aria-pressed="true" hidden>precise notes: on</button>
+      <div class="prose">
+        <Content />
+      </div>
+      <div class="after">
+        <a href="/notebook">&larr; the notebook</a>
+        <a href="mailto:centrehold35@gmail.com" class="mono">reply by e-mail</a>
+      </div>
+    </article>
+  </div>
+</Base>
+
+<script>
+  import { initSidenotes } from '../../scripts/sidenotes.js';
+  initSidenotes();
+</script>
