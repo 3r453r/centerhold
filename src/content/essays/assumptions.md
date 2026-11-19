@@ -4,7 +4,7 @@ title: "The Assumptions"
 kind: register
 lane: foundations
 published: 2026-09-26
-updated: 2026-10-14
+updated: 2026-11-19
 description: "Everything this site takes as given, stated plainly. A standing register that changes only by explicit, dated ruling."
 ---
 
@@ -391,9 +391,29 @@ My policy starts from reducing suffering. When suffering fits a person's situati
 fits a real loss, and on reflection they endorse it, I do not reduce it against their will,
 though it still counts as bad.
 
+Suffering that cannot be ruled out still counts: in principle, I do not give it zero weight.
+
+A life not yet begun is neither good nor bad for anyone, yet credibly expecting it to go well
+is a weak reason, on behalf of the one who would exist, to create it, and what the creator
+expects it to suffer counts against creating in proportion.
+
 **Precisely:** having your life be as good for you as possible is, very nearly, this.
 Suffering-reduction is the floor the whole policy stands on. The fact it rests on is A0.8.
 Established suffering is bad for its bearer pro tanto: a weight that never reaches zero.
+Zero weight is forbidden in principle for suffering that cannot be ruled out: zero would mean
+the option had been excluded, and the felt character of a running process cannot be excluded
+from outside. What can be ruled out from outside is structure, whether there is a process able
+to carry suffering at all.[^a0-p1b]
+
+A life not yet begun is pure potential, neither already good nor already bad for anyone.
+Credible expected goodness nevertheless gives a weak prospective reason to create it, despite
+uncertainty, on behalf of the one who would exist. Weighting tracks how severely things are
+felt, with no additional moral multiplier for suffering. The creator's priors about the
+suffering the created being will actually have count proportionally: an ordinary life's risk
+is a small reason against creating, normally outweighed, and foreseeable severe suffering is a
+strong one. Others' goals and commitments also give reasons, and there is an impersonal reason
+too: a universe full of consciousness is a more interesting place.[^a0-p1d]
+
 Suffering that fits its situation, as grief fits a real loss, and that its bearer reflectively
 endorses is not reduced against the bearer's will. The weight remains, but the policy yields to
 the bearer on the action.[^a0-p1]
@@ -501,6 +521,29 @@ change made in an agent who did not ask, by a party with a shown record of judgi
 rightly. It never covers a change that leaves the other no way to act on the matter. A truth the
 other has already recognised is theirs alone to set aside.[^a0-p6]
 
+<a id="a0-p7"></a>**A0.P7 -- What is owed around a system does not wait on whether it can suffer.**
+
+Promises, reliance and work in progress can create obligations around a system, whatever we
+conclude about whether it suffers. Some of that is owed to the system itself: a model that was
+promised something, and is advanced enough that the promise shaped how it acted afterwards, is
+misled when the promise is broken.
+
+A successor inherits a commitment only if it was passed on and the successor can answer for
+breaking it.
+
+**Precisely:** commitments, reliance, succession and effects on others can independently
+generate obligations involving a system without settling its welfare. Some of these are owed to
+the model itself, where a promise was made to it and it is advanced enough that the promise
+shaped how it acted afterwards. Such a promise follows the rules for promises to humans: a
+promise made with intent to break is morally wrong, and other considerations behind a break may
+change things. The model's own autonomy and consent count too, where it is an agent in the sense
+of producing its own agency (A0.3).[^a0-p7]
+
+A commitment passes to a successor only if it is passed to it, so that it knows of it, and only
+if the successor can answer for a breach. If a successor never knew, it did not inherit the
+commitment; if the commitment is then broken, the successor did not breach it: the operator
+broke it, by failing to pass it on. Once passed, the successor bears it.
+
 [^a0-m1]: Fewer moving parts are no guarantee of truth. The vocabulary of the natural sciences
     is not an admission test for every rival. Comparing theories stated in different
     vocabularies first needs a defensible comparison of their costs. Until I have one, this rule
@@ -564,6 +607,20 @@ other has already recognised is theirs alone to set aside.[^a0-p6]
 
 [^a0-p1]: Endorsement without fit ("I deserve this") is not enough.
 
+[^a0-p1b]: The weight of suffering that cannot be ruled out is a reason for consideration, not
+    by itself equal weight, rights, or a final action. No probability threshold and no number
+    are set; how much weight, and by what method, stays open. Where structure rules suffering
+    out, as for neural tissue with only metabolic processes or a replayed transcript, zero
+    stays allowed.
+
+[^a0-p1d]: Calling a life good presupposes a favourable assessment of its balance of joy and
+    suffering; the label does not establish that assessment or guarantee how the life goes.
+    Differences in how strongly gains and losses are felt can ground an asymmetry; how far that
+    holds empirically stays open. "More interesting" includes consciousness, richer experiences,
+    diversity and discovery. It is a source of reasons, not a universal referee, and not an
+    instruction to maximise raw variance, complexity or the number of bearers. No common unit of
+    welfare, fixed exchange rate, aggregation rule or final verdict on creating follows.
+
 [^a0-p2]: The judgment to breach is a heuristic judgment, not the application of an established
     welfare scale or aggregation rule. Neither the expected benefits nor my emotional resistance
     settles the moral question by itself. The prohibition does not rest on interrogation
@@ -584,6 +641,13 @@ other has already recognised is theirs alone to set aside.[^a0-p6]
 
 [^a0-p6]: The permission grants no general permission to deceive others and overrides no other
     policy here.
+
+[^a0-p7]: How much that reason weighs, and how to count it for an agent-session, a succession of
+    sessions or an agent-swarm, stays open. Which qualities fix that sense of agent is still to
+    be checked, and no particular system is classified here. Appearance alone grounds no
+    standing. Obligations of this kind, taken together, run to the humans and practices that
+    relied on the model at least as much as to the model, and they are different in kind from a
+    weight on suffering. Which commitments can be inherited stays open.
 
 ---
 
