@@ -281,7 +281,7 @@ worth having on its own. It won't settle every hard case, but it gives us a way 
 through them together and catch each other's mistakes.
 
 The foundations end here. Everything after this page will use them. The *timeless* essays
-set out positions I consider settled. The *applied* essays take the tools of these first two essays into contested ground, and make the other
+set out positions I hold, open to correction. The *applied* essays take the tools of these first two essays into contested ground, and make the other
 side's best case before answering it.
 
 *The applied essays are forthcoming. They will cite this page, and be held to it.*
