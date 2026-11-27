@@ -4,7 +4,7 @@ title: "Objective truth, and what force must answer to"
 kind: essay
 lane: foundations
 published: 2026-09-26
-updated: 2026-10-07
+updated: 2026-11-27
 description: Shared standards let us check claims, correct mistakes, and scrutinize coercive rules. We can build that practical framework without agreeing on every philosophical foundation.
 ---
 
@@ -192,8 +192,8 @@ It is still a policy for whoever imposes it, and they owe an answer. A rule impo
 who cannot realistically leave has to pass the stricter test: would I, the one imposing it,
 agree to be its subject? And it stays bounded by the limits that never depend on anyone's
 agreement: established suffering always counts, and the institutional ban on torture stays
-absolute.[^noexit] Taking someone's options away when you could leave them open is itself a
-wrong. That holds even if the person does not know what they are missing and is content: seen
+absolute.[^noexit] Taking someone's options away when you could leave them open and still
+achieve the desired outcome is itself a wrong. That holds even if the person does not know what they are missing and is content: seen
 with the full picture in view, they are deprived of ways they could have grown.
 
 Now run the two rules from the start of this section through both tests. The speed limit: the
@@ -340,8 +340,9 @@ publication require distinct judgments.
 [^noexit]: [A0.P4](/assumptions#a0-p4): "The threshold applies only to people who can choose:
     for someone who cannot reject or leave, a rule is terrain, but it is still policy for
     whoever imposes it, and it must pass the stricter test and the limits that need no
-    agreement. Taking away someone's options when one could leave them open is a wrong in
-    itself, even if they are content, because it deprives them of ways they could have grown."
+    agreement. Taking away someone's options when one could leave them open and still achieve
+    the desired outcome is a wrong in itself, even if they are content, because it deprives them
+    of ways they could have grown."
     The two limits: [A0.P1](/assumptions#a0-p1), "Established suffering is bad for its bearer
     pro tanto: a weight that never reaches zero."; and [A0.P2](/assumptions#a0-p2), "I uphold
     an absolute institutional prohibition on torture."

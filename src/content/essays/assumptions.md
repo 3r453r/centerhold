@@ -4,7 +4,7 @@ title: "The Assumptions"
 kind: register
 lane: foundations
 published: 2026-09-26
-updated: 2026-11-19
+updated: 2026-11-27
 description: "Everything this site takes as given, stated plainly. A standing register that changes only by explicit, dated ruling."
 ---
 
@@ -36,7 +36,7 @@ Each item, how hard I hold it, and whether it is map or policy.
 | [1](#a0-1) | There is a way things are, independent of anyone's beliefs | highest | map |
 | [2](#a0-2) | A claim's content is the typed difference it makes in a declared domain | highest | map |
 | [3](#a0-3) | Natural agency is implemented; the record favours gaps in knowledge over the supernatural | highest | map |
-| [4](#a0-4) | A regress is vicious only if the world would have to complete it | highest | map |
+| [4](#a0-4) | A regress is vicious when the world must complete it and its contributions do not converge; a structure is vicious when its steps admit no consistent outcome | highest | map |
 | [4a](#a0-4a) | A transition's prerequisite must be completable | highest | map |
 | [5](#a0-5) | Felt experience occurs and is real at its level | highest | map |
 | [6](#a0-6) | Reality is layered; what emerges is explainable from below in principle | highest | map |
@@ -137,7 +137,7 @@ When I call something real, I say in which sense: the most basic stuff, or a pat
 you predict what you could not predict any other way. Chairs, selves and feelings are real in
 the second sense, and that is no lesser sense.
 
-**Precisely:** *real at the bottom* is the fundamental basis, whatever it turns out to be: a ground layer, or a cycle of mutual dependence that is not vicious (A0.4), one the world never has to complete. *Real at level n* is a pattern at that level which pushes back --
+**Precisely:** *real at the bottom* is the fundamental basis, whatever it turns out to be: a ground layer, or a cycle of mutual dependence that is not vicious (A0.4). *Real at level n* is a pattern at that level which pushes back --
 tracking it gives you predictive grip you cannot get any other way. Chairs, selves, and
 feelings are real in the second sense, and that is not a lesser sense. For feelings A0.5 states
 this. This definition also names the program I pursue: show that feelings are real at a level,
@@ -201,7 +201,11 @@ evidence for the supernatural account, not by something we cannot yet explain.
 **Precisely:** an agent's capacities, and each exercise of them, arise through some underlying
 organisation and its dynamics. The account may end in basic facts or in a loop that is not
 vicious. A choice that is no step in any process of the machinery would be primitive. I would
-count it supernatural, even if the machinery built the capacity for it. The preference is
+count it supernatural, even if the machinery built the capacity for it. By implemented I mean
+that a system's own organisation and dynamics produce the effects. Where intervention could in
+principle check production, production is required; where nothing could check it, whether a
+system is implemented is a question at the frontier (section 1). A replayed record has no
+agency. The preference is
 defeasible, not a guarantee. An anomaly can defeat a particular theory without establishing a
 supernatural cause. An implementation not yet found is not one shown absent. Reversal takes
 positive evidence for the supernatural account, not merely the failure of a natural one. What
@@ -212,28 +216,43 @@ reverse this item and reopen A0.6. Where the alternatives cannot presently be to
 so rather than treat the preference as settled.[^a0-3]
 
 <a id="a0-4"></a>**A0.4 -- A regress is vicious when the world would have to complete it for the next
-state to be fixed; nothing needs an infinite descent completed, so no such regress is real.**
+state to be fixed and its contributions do not converge, so that no limit fixes that state. A
+structure is also vicious, finite or infinite, when its steps taken together admit no consistent
+outcome: no assignment satisfies every step. Neither can be implemented, so nothing real is
+either.**
 
-An endless chain of explanations is a problem only if the world would have to run through all
-of it before the next moment could be settled. Chains nobody has to walk through, such as
-reasons behind reasons, do no harm.
+An endless chain of explanations is a problem if the world would have to run through all of it
+before the next moment could be settled, and its contributions never settle towards a result.
+Chains nobody has to walk through, such as reasons behind reasons, do no harm, unless their
+steps cannot all hold at once. A structure whose steps cannot all hold at once cannot be real,
+however short.
 
 **Precisely:** a regress nothing has to walk is harmless: the truth regress, the regress of
-reasons, a loop of mutual dependence. The turtles fail because holding-up is never done, not
-because they are infinite. A bottomless structure is fine if its contributions converge, so
-that nothing below some scale changes what is fixed above it.[^a0-4]
+reasons, a loop of mutual dependence, unless its steps admit no consistent outcome. The turtles
+fail because holding-up is never done, not because they are infinite. A bottomless structure is
+not ruled out merely because it is infinite. Convergence here means that the effect of further
+contributions can be made arbitrarily small for the purpose at hand, not that it becomes exactly
+zero below a cutoff. Convergence alone does not establish physical implementability
+(A0.4a).[^a0-4]
 
-**Commits me to:** rejecting explanations that defer forever and are needed.
+**Commits me to:** rejecting explanations that defer forever, are needed and never converge, and
+structures whose steps admit no consistent outcome.
 
 <a id="a0-4a"></a>**A0.4a -- If a transition requires a prerequisite process to complete,
 that process must be completable.**
 
 If something can only happen after some process finishes, that process must be able to finish.
 An infinite description, or our inability to calculate the result, does not show that it
-cannot.
+cannot. Nor does a series that converges show, by itself, that a required physical process can
+finish.
 
 **Precisely:** neither a mathematically infinite description nor an observer's inability to
-calculate the result establishes an impossible prerequisite.[^a0-4a]
+calculate the result shows that a process is required, or that a required process is impossible.
+Convergence can supply a definite limit or an adequate approximation for the relevant purpose.
+It does not by itself establish that a required physical process can complete: the actual
+dynamics and constraints must allow completion, and any description used to establish that claim
+must remain applicable to the required stages. Infinity alone does not show
+impossibility.[^a0-4a]
 
 **Commits me to:** rejecting a world whose next state waits on a process nothing could finish.
 
@@ -252,15 +271,18 @@ sign that the occurrence is not the judgment.[^a0-5]
 
 **Commits me to:** rejecting the elimination of experience; the bet against "mind first" stands.
 
-<a id="a0-6"></a>**A0.6 -- Reality is layered on a fundamental basis, and whatever emerges above it is
-explainable from below in principle.**
+<a id="a0-6"></a>**A0.6 -- I accept a fundamental basis on which reality is layered, and whatever
+emerges above it is explainable from below in principle.**
 
 The world is built in layers, and I take it, open to contrary evidence, that whatever arises
 from simpler parts can in principle be explained by how it is made, even if nobody could finish
 that explanation in practice. A wave can ruin buildings, but only through the organised motion
 of the water.
 
-**Precisely:** the basis is a ground layer or a cycle of mutual dependence that is not vicious.
+**Precisely:** beyond what physics can reach, I hold that a basis exists as something assumed
+real without evidence: neither a mere frame with belief suspended nor established knowledge.
+Separately, within physics' reach it is an empirical bet, and it stays open to being defeated by
+evidence. The basis is a ground layer or a cycle of mutual dependence that is not vicious.
 Higher-level organisation is significant through its implementation. Attaching a label is not
 the same as being: you can perform "sitting" and a chair will support it. On emergence I settle
 the question on the weak side, defeasibly: I would close strong emergence everywhere, but open
@@ -486,8 +508,9 @@ leave, close to what he calls a modus vivendi) and an exit he leaves out. Force 
 who do not want in borrows no legitimacy from the frame. The threshold applies only to people
 who can choose. For someone who cannot reject or leave, a rule is terrain, but it is still
 policy for whoever imposes it, and it must pass the stricter test and the limits that need no
-agreement. Taking away someone's options when one could leave them open is a wrong in itself,
-even if they are content, because it deprives them of ways they could have grown.[^a0-p4]
+agreement. Taking away someone's options when one could leave them open and still achieve the
+desired outcome is a wrong in itself, even if they are content, because it deprives them of ways
+they could have grown.[^a0-p4]
 
 <a id="a0-p5"></a>**A0.P5 -- Deliberately reducing knowledge is not forbidden outright.**
 
@@ -573,6 +596,8 @@ broke it, by failing to pass it on. Once passed, the successor bears it.
     an effect is not made natural merely by being observed; and it is not physical causal
     closure by decree. Nor does it say that nothing wholly inert exists: that exhaustive
     extension has metaphysical content but no empirical discriminator, and I do not adopt it.
+    Intervention checks production and does not define it; no theory of causation is adopted
+    here.
 
 [^a0-4]: Whether reality has a bottom I leave to the evidence. If it can be proved that it has
     none, I will adapt immediately. The convergence rider is held at the status A0.4a gives it:
@@ -637,7 +662,8 @@ broke it, by failing to pass it on. Once passed, the successor bears it.
     claims about the right rule for idealised agents.
 
 [^a0-p5]: This rejects a blanket ban; it excuses no particular intervention, and it does not
-    pick a theory of welfare.
+    pick a theory of welfare. By itself it supplies no new authority to impose information loss
+    on others.
 
 [^a0-p6]: The permission grants no general permission to deceive others and overrides no other
     policy here.
@@ -671,8 +697,10 @@ foundations essays; it is here for the essays that come after them.
   be exposed by probing beyond the situations on which it was fitted. The resulting divergence
   is evidence of a present structural difference, not evidence about the system's causal
   history.
-- <a id="a0-r4"></a>**A0.R4 -- A static record and an active interpreter differ,** and a record plus an
-  interpreter is a third thing that is neither. Highest confidence.
+- <a id="a0-r4"></a>**A0.R4 -- A static record and an active interpreter differ.** When interpretation
+  guides decisions that update the retained state, their coupling forms a live, revisable agent,
+  an integrated whole whose capacities depend on the interaction. No distinct kind of mind is
+  required. Highest confidence.
 
 *On welfare and its detection (rides on A0.10):*
 
@@ -697,7 +725,8 @@ foundations essays; it is here for the essays that come after them.
 
 *On authorship:*
 
-- <a id="a0-r9"></a>**A0.R9 -- Fast expert action can contain deliberation compiled earlier,** so expertise does
+- <a id="a0-r9"></a>**A0.R9 -- Fast expert action can rest on the agent's own earlier learning, deliberated
+  or enacted and sorted by outcomes, within a declared system and history,** so expertise does
   not reduce authorship. That the present "I" might decide differently from the past one shows
   only that the self evolves; connectedness is what keeps the chain worthy of the label.
 
