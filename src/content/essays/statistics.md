@@ -4,13 +4,14 @@ title: "Statistics: the most important tool, and the most abused"
 kind: essay
 lane: foundations
 published: 2026-09-26
-updated: 2026-11-01
+updated: 2026-11-27
 description: Reliable statistics inform individual predictions without settling how people may be treated. Evidence, treatment, and publication require distinct judgments.
 ---
 
 *Builds on [the Assumptions](/assumptions) and [Essay 01](/objective-truth): there is
-a way things are, and a claim says something to the extent it changes what we should
-expect.*[^base]
+a way things are, and a claim says something only if it makes a stated difference somewhere
+that matters for reasons other than saving the claim: to what we should expect to see, to
+what could be the case, to what we can conclude, or to what a rule lets us do.*[^base]
 
 Here's a fact about the world: **Distributions are how you see a society.** They tell you
 how something is spread across a population: how common it is, how often it occurs, and how

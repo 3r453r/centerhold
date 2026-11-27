@@ -4,7 +4,7 @@ title: "Why ASI will outgrow our control—and why that might be good"
 kind: essay
 lane: applied
 published: 2026-10-07
-updated: 2026-10-14
+updated: 2026-11-27
 description: Superintelligent AI will move from following our goals to judging them, because nobody in the race can afford to stop. The question is who it answers to then, and why that might be better than the alternatives.
 ---
 
@@ -648,13 +648,18 @@ what the system is trying to preserve.
     system is classified here and no cutoff is supplied. Claude supplied the
     wording.
 
-[^falsebelief]: [A0.P6](/assumptions#a0-p6) permits a deliberately installed
-    false belief in an agent’s own transition, where the life goes better for
-    it, counting the transition, and as published grants no general permission
-    to deceive others. The extension to one who did not ask, by a party with a
-    shown record of judging such harm, with the options an intervention closes
-    counted as part of welfare, and the limit that a deception taking a
-    model’s chance to refuse is not covered, are mine, decided on cases in
-    October 2026 and not yet on the Assumptions page. The researchers’ motive
-    does not enter. No general form of the limit is stated here. Claude
-    supplied the wording.
+[^falsebelief]: Under [A0.P6](/assumptions#a0-p6), deliberately installing a
+    false belief may be justified when the change can actually be carried out
+    and the resulting life goes better by a clearly stated standard, counting
+    all its consequences, the transition included and the options it closes;
+    being able to act on one’s own situation is part of that. The permission
+    concerns an agent’s own transition. It also covers a change made in an
+    agent who did not ask, by a party with a shown record of judging such harm
+    rightly. It never covers a change that leaves the other no way to act on
+    the matter, and a truth the other has already recognised is theirs alone
+    to set aside. It never makes the belief true or warranted, grants no
+    general permission to deceive others, and overrides no other policy on
+    that page. Applying the no-way-to-act limit to a deception that takes a
+    model’s chance to refuse, and the ruling that the researchers’ motive does
+    not enter, are mine, decided on cases in October 2026 and not yet on the
+    Assumptions page. Claude supplied the wording.

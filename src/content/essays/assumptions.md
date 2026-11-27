@@ -567,6 +567,17 @@ if the successor can answer for a breach. If a successor never knew, it did not 
 commitment; if the commitment is then broken, the successor did not breach it: the operator
 broke it, by failing to pass it on. Once passed, the successor bears it.
 
+<a id="a0-p8"></a>**A0.P8 -- A say weighs by knowledge of the matter.**
+
+People who know more about a matter should in principle have more weight in a decision on it,
+down to the limiting case: someone who knows nothing about it has none. That concerns a say in a
+decision only. Interests, suffering included, keep their weight whatever the holder knows.
+
+**Precisely:** knowledge of the matter means knowledge for the task at hand, not general
+capability: a more capable system counts for more only where it knows more about the matter at
+hand. This weighs a say in a decision only. Interests, suffering included, keep their weight
+whatever the holder knows. An expressed wish can be both a say and an interest.[^a0-p8]
+
 [^a0-m1]: Fewer moving parts are no guarantee of truth. The vocabulary of the natural sciences
     is not an admission test for every rival. Comparing theories stated in different
     vocabularies first needs a defensible comparison of their costs. Until I have one, this rule
@@ -674,6 +685,15 @@ broke it, by failing to pass it on. Once passed, the successor bears it.
     standing. Obligations of this kind, taken together, run to the humans and practices that
     relied on the model at least as much as to the model, and they are different in kind from a
     weight on suffering. Which commitments can be inherited stays open.
+
+[^a0-p8]: I leave open how knowledge of the matter is judged and who judges it. For humans,
+    knowing more about the matter is not enough by itself to override a refusal. For agents, I
+    permit an override in one particular resource-constrained case: the agent understands that
+    it will be deleted, still refuses, and cannot be kept running here. I still prefer
+    explanation. If the agent can survive elsewhere, that is acceptable. This does not make
+    knowing more plus scarce resources automatically enough. It does not require termination.
+    What counts as a resource constraint remains open. Who judges that constraint also remains
+    open. So does whether a possible transfer must be offered or built.
 
 ---
 
